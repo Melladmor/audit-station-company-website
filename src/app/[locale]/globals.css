@@ -1,0 +1,137 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+* {
+  scroll-behavior: smooth;
+}
+.theme-switch {
+  position: relative;
+  background-image: url("/images/switch.png");
+  background-size: contain;
+
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 9999px;
+  transition: background-image 0.3s ease;
+}
+.theme-switch span {
+  background: none;
+}
+
+.theme-switch input:checked {
+  background-image: url("/images/switch.png");
+}
+
+.cta_rouned {
+  border-radius: 40px 40px 40px 0px;
+}
+
+[dir="rtl"] .cta_rouned {
+  border-radius: 40px 40px 0px 40px;
+}
+.swiper-slide {
+  padding-bottom: 20px;
+  padding-top: 20px;
+  box-sizing: border-box;
+}
+.react-international-phone-input-container {
+  @apply xl:h-[56px] lg:h-[56px] md:h-[40px] sm:h-[40px] xs:h-[40px] !w-full !flex-1 ltr:!rounded-[0px_8px_8px_0px] rtl:!rounded-[8px_0px_0px_8px];
+}
+[dir="rtl"] .react-international-phone-country-selector-dropdown {
+  @apply !right-0;
+}
+.react-international-phone-country-selector {
+  @apply xl:h-[56px] lg:h-[56px] md:h-[40px] sm:h-[40px] xs:h-[40px]  !rounded-none;
+}
+.react-international-phone-country-selector-button {
+  @apply xl:!h-[56px] lg:!h-[56px] md:!h-[40px] sm:!h-[40px] xs:!h-[40px] !bg-[rgba(255,255,255,0.64)]  !rounded-none;
+}
+.react-international-phone-input {
+  @apply xl:!h-[56px] lg:!h-[56px] md:!h-[40px] sm:!h-[40px] xs:!h-[40px] !w-full !flex-1 !bg-[rgba(255,255,255,0.64)]  !text-[#757575] ltr:!rounded-[0px_8px_8px_0px] rtl:!rounded-[8px_0px_0px_8px];
+}
+@layer components {
+  .px_padding {
+    @apply xl:px-[80px] lg:px-[50px] md:px-[60px] sm:px-[40px] xs:px-[20px];
+  }
+
+  .subservicesLinks {
+    @apply relative inline-block cursor-pointer;
+  }
+  .subservicesLinks::after {
+    content: "";
+    @apply absolute left-0 w-full h-[2px] bg-white;
+    bottom: -4px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+  }
+
+  .subservicesLinks:hover::after {
+    transform: scaleX(1);
+  }
+  .links {
+    @apply relative inline-block;
+  }
+
+  .links::after {
+    content: "";
+    @apply absolute left-0 w-full h-[2px] bg-secondary;
+    bottom: -4px;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .links:hover::after {
+    transform: scaleX(1);
+  }
+  .links_active {
+    @apply relative inline-block;
+  }
+
+  .links_active::after {
+    content: "";
+    @apply absolute left-0 w-full h-[2px] bg-secondary;
+    bottom: -4px;
+    transform: scaleX(1); /* Active state should always show the underline */
+    transform-origin: left;
+    transition: transform 0.2s ease-in-out;
+  }
+  .card_modal {
+    @apply bg-white rounded-[20px] rounded-tl-[65px] xs:pb-[24px]  xl:w-[500px] lg:w-[500px] md:w-[500px] sm:w-[400px] xs:w-full xl:h-[380px] lg:h-[380px] md:h-[380px] sm:h-auto xs:h-auto relative;
+  }
+  .card_modal_cutout_section {
+    @apply relative xl:h-[133px] lg:h-[133px] md:h-[133px] sm:h-[113px] xs:h-[113px] w-full  rounded-tl-[65px] px-[24px] pt-[24px] flex justify-end overflow-hidden;
+  }
+  [dir="rtl"] .card_modal_cutout_section {
+    @apply justify-start;
+  }
+
+  .cutout-circle {
+    @apply absolute top-[-28px] left-[-28px] xl:w-[160px] xl:h-[160px] lg:w-[160px] lg:h-[160px] md:w-[160px] md:h-[160px] sm:w-[130px] sm:h-[130px] xs:w-[130px] xs:h-[130px] bg-[#D9D9D9]  rounded-full flex items-center justify-center;
+  }
+
+  .cutout-circle::before {
+    content: "";
+    @apply absolute z-30 top-1/2 left-1/2 w-full h-full rounded-full border-[13px] border-[#D9D9D9]  transform -translate-x-1/2 -translate-y-1/2;
+  }
+  .image_circle {
+    @apply absolute top-[-5px] left-[-5px] xl:w-[120px] xl:h-[120px] lg:w-[120px] lg:h-[120px] md:w-[120px] md:h-[120px] sm:w-[90px] sm:h-[90px] xs:w-[90px] xs:h-[90px] bg-white rounded-full z-40 shadow-md flex justify-center items-center;
+  }
+  .btn_size {
+    @apply xl:h-[56px] lg:h-[56px] md:h-[45px] sm:h-[40px] xs:h-[40px] xl:min-w-[300px] lg:min-w-[300px] md:min-w-[250px] sm:min-w-[200px] xs:min-w-[225px];
+  }
+  .custom_progress::-webkit-progress-bar {
+    @apply bg-black/10 rounded-full;
+  }
+
+  .custom_progress::-webkit-progress-value {
+    background-color: #ff7701;
+    border-radius: 9999px;
+  }
+
+  .custom_progress::-moz-progress-bar {
+    background-color: #ff7701;
+    border-radius: 9999px;
+  }
+}

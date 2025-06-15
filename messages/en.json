@@ -1,0 +1,139 @@
+{
+  "navbarlinks": {
+    "home": "Home",
+    "aboutus": "About Us",
+    "services": {
+      "services": "Services",
+      "mainservices": "Main Services",
+      "packages": "Packages"
+    },
+    "platform": "Platform",
+    "training": "Training",
+    "news": "News",
+    "contactus": "Contact Us",
+    "signup": "Sign Up",
+    "signin": "Sign In",
+    "customers": "Customers",
+    "our_team": "Our Team",
+    "join_rewards_program": "Join Our Rewards Program",
+    "add_review": "Add Review",
+    "career": "Career",
+    "terms_conditions": "Terms & Conditions",
+    "privacy_policy": "Privacy Policy"
+  },
+  "sections": {
+    "ourhappycustomers": {
+      "first": "Our Happy",
+      "second": "Customers",
+      "subTitle": "At Audit Station, our success is measured by the trust and satisfaction of our clients. Through expert auditing and tax solutions, we help businesses achieve financial clarity, compliance, and growth."
+    },
+    "aboutussection": {
+      "first": "About",
+      "second": "Us"
+    },
+    "ourservices": {
+      "first": "Our",
+      "second": "Services",
+      "subTitle": "At Audit Station, we provide expert tax, auditing, and financial consultancy services tailored to help businesses stay compliant, optimize performance, and drive sustainable growth."
+    },
+    "packages": {
+      "first": "Our",
+      "second": "Packages",
+      "subTitle": "We offer flexible and tailored packages designed to meet your business needs. Whether you're looking for comprehensive auditing, tax consultancy, or financial advisory services, our plans ensure accuracy, compliance, and efficiency."
+    },
+    "ourplatform": {
+      "first": "Our",
+      "second": "Platform",
+      "subTitle": "We are one of the leading and most trusted accounting firms in the middle east. We redefine the industry by our auditing and accounting solutions designed specially to meet your business needs. "
+    },
+    "trainingprograms": {
+      "first": "Training",
+      "second": "Programs",
+      "subTitle": "Enhance your skills with our expert-led training programs designed to equip professionals with the latest knowledge in auditing, tax consultancy, and financial management."
+    },
+    "taxStation": {
+      "first": "Tax",
+      "second": "Station",
+      "subTitle": "We are one of the leading and most trusted accounting firms in the middle east. We redefine the industry by our auditing and accounting solutions designed specially to meet Your business needs. "
+    },
+    "rewardsprogram": {
+      "first": "Rewards",
+      "second": "Program",
+      "subTitle": "We created a reward program for all of our clients in order to show how much we appreciate them.",
+      "title": "‘’ Steps to Advance in the Rewards Program ‘’",
+      "subTitle2": "Move Up, Earn More, Unlock Exclusive Benefits"
+    },
+    "ourteam": {
+      "first": "Our",
+      "second": "Team",
+      "subTitle": "Our team is a group of dedicated professionals committed to delivering excellence in auditing, tax consultancy, and financial solutions. "
+    },
+    "news": {
+      "first": "Latest",
+      "second": "News",
+      "subTitle": "Stay informed with the latest insights, industry trends, and company updates from Audit Station. From financial advancements to expert advice, explore news that keeps you ahead in the world of auditing and tax consultancy."
+    },
+    "googlereviews": {
+      "first": "Google",
+      "second": "Reviews",
+      "subTitle": "Discover why businesses trust Audit Station! See real feedback from our satisfied clients who rely on our expertise in auditing, tax consultancy, and financial services."
+    },
+    "callback": {
+      "first": "Request",
+      "second": "a Call Back",
+      "subTitle": "Have questions or need expert financial guidance? Our team is here to help! Contact us today for professional auditing, tax consultancy, and business advisory services."
+    }
+  },
+  "validations": {
+    "firstname_required": "First name is required",
+    "lastname_required": "Last name is required",
+    "email_invalid": "Invalid email address",
+    "phone_required": "Phone number is required",
+    "company_required": "Company name is required",
+    "message_required": "Message is required",
+    "phone_invalid_length": "Phone number should be at least 7 digits (excluding country code)"
+  },
+  "statistics": {
+    "inTheWorld": "In The World",
+    "yearsOfExperience": "Years Of Experience",
+    "customers": "Customers",
+    "satisfaction": "Satisfaction",
+    "overGcc": "Over GCC"
+  },
+  "seemore": "See More",
+  "readmore": "Read More",
+  "readdetails": "Read Details",
+  "aed": "AED",
+  "mon": "/mo",
+  "contactus": "Contact Us",
+  "features": "Features",
+  "compare_packages": "Compare Packages",
+  "visitaudit": "Visit Audit Station Platform",
+  "discovermore": "Discover More",
+  "downloadapp": "Download App",
+  "points": "Points",
+  "minread": "Min Read",
+  "addreview": "Add Review",
+  "getintouch": "Get in Touch with Us",
+  "firstname": "First Name",
+  "lastname": "Last Name",
+  "email": "Email",
+  "phonenumber": "Phone Number",
+  "companyname": "Company Name",
+  "yourmessage": "Your Message",
+  "submit": "Submit",
+  "mainaddress": "UAE: 1906, Grosvenor Business Bay Tower,Business Bay, Dubai.",
+  "omanaddress": "Oman: 12, Ooredoo building, Alkhoud A'tijari street Al khoud, Muscat.",
+  "quicklinks": "Quick Links",
+  "followusonsocial": "Follow Us On Social Media",
+  "copyright": "© Copyright - Auditstation.",
+  "auditstationcompany": "Audit Station",
+  "ourmission": "Our Mission",
+  "ourvission": "Our Vision",
+  "watchstory": "Watch Our Story",
+  "aboutvideotitle": "Discover how Audit Station is transforming financial excellence.",
+  "contactwhatsapp": "Contact Us On Whatsapp",
+  "subscribeNow": "Subscribe Now",
+  "connectWithAgent": "Connect with a certified tax agent for personalized support. Don't wait—leave your inquiry today!",
+  "taxstation": "Tax Station"
+}
