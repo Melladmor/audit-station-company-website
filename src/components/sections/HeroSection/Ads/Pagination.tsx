@@ -12,7 +12,7 @@ const SwiperPagination: FC<PaginationLinesProps> = ({
   handleSlideChange,
 }) => {
   return (
-    <div className="flex justify-center items-center space-x-2 absolute bottom-[40px] left-[50%] z-10 translate-x-[-50%]">
+    <div className="flex justify-center items-center gap-2 absolute bottom-[40px] left-[50%] z-10 translate-x-[-50%]">
       {Array.from({ length: totalSlides }).map((_, index) => (
         <span
           key={index}

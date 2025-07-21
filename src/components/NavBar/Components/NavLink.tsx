@@ -18,7 +18,8 @@ const NavLink = ({ isPage, title, url, isDropDown }: Props) => {
         <li
           className={`links xl:text-[20px] lg:text-[14px] ${
             isActiveLink ? "links_active text-secondary" : "text-white"
-          } `}>
+          } `}
+        >
           <details>
             <summary>{title}</summary>
             <ul>
@@ -27,7 +28,8 @@ const NavLink = ({ isPage, title, url, isDropDown }: Props) => {
                   <li className="text-black text-nowrap" key={link.id}>
                     <Link
                       className="text-nowrap"
-                      href={link.isPage ? link.url : `#${link.url}`}>
+                      href={link.isPage ? link.url : `#${link.url}`}
+                    >
                       {link.title}
                     </Link>
                   </li>
@@ -40,7 +42,8 @@ const NavLink = ({ isPage, title, url, isDropDown }: Props) => {
         <li
           className={`links xl:text-[20px] lg:text-[14px] ${
             isActiveLink ? "links_active text-secondary" : "text-white"
-          } `}>
+          } `}
+        >
           <Link href={isPage ? url : `#${url}`}>{title}</Link>
         </li>
       )}

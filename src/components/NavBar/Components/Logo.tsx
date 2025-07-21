@@ -9,7 +9,7 @@ const Logo = () => {
         alt="Logo"
         width={100}
         height={100}
-        className="xl:size-[48px] lg:size-[28px] md:size-[38px] sm:size-[38px] xs:size-[38px]"
+        className="xl:size-11 lg:size-[28px] md:size-[38px] sm:size-[38px] xs:size-[38px]"
       />
 
       <Image
@@ -17,7 +17,7 @@ const Logo = () => {
         alt="Logo"
         width={100}
         height={100}
-        className="xl:w-[82px] xl:h-[41px] lg:w-[72px] lg:h-[31px] md:w-[72px] md:h-[31px] sm:w-[72px] sm:h-[31px] xs:w-[72px] xs:h-[31px] xl:block lg:hidden md:block sm:block xs:block"
+        className="xl:w-[100px] xl:h-[61px] lg:w-[72px] lg:h-[31px] md:w-[72px] md:h-[31px] sm:w-[72px] sm:h-[31px] xs:w-[72px] xs:h-[31px] "
       />
     </Link>
   );

@@ -1,11 +1,11 @@
 import { getTranslations } from "next-intl/server";
 import { NavLinkI } from "./type";
 import LanguageSelect from "./Components/LangaugeSelect";
-import { ThemeSwitcher } from "./Components/ThemeSwitcher";
 import Profile from "./Components/Profile";
 import Logo from "./Components/Logo";
 import NavItemsMobile from "./Mobile/NavItemsMobile";
 import NavBar from "./Components/NavBar";
+import SwitcherMobile from "./Mobile/SwitcherMobile";
 
 const Header = async () => {
   const t = await getTranslations("navbarlinks");
@@ -64,24 +64,39 @@ const Header = async () => {
   ];
   return (
     <header className="px_padding xl:py-[12px] lg:py-[12px] md:py-[12px] sticky top-0 z-50 bg-mainblack">
-      <div className="drawer z-50">
+      <div className="drawer drawer-end z-50">
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
         <div className="drawer-content flex flex-col">
           <div className="w-full navbar">
             <div className="navbar-start">
-              <div className="hidden xl:block lg:block">
+              <div>
                 <Logo />
               </div>
+            </div>
+            <NavBar linksData={linksData} />
+            <div className="navbar-end">
+              <div className="hidden lg:block">
+                <SwitcherMobile />
+              </div>
+              <div className="hidden lg:block">
+                <LanguageSelect />
+              </div>
+              <div className="hidden lg:block xl:block size-7">
+                <Profile />
+              </div>
+
               <div className="lg:hidden">
                 <label
                   htmlFor="my-drawer"
-                  className="md:size-[30px] sm:size-[25px] text-white xs:size-[25px] bg-white rounded-sm flex justify-center items-center">
+                  className="md:size-[30px] sm:size-[25px] text-white xs:size-[25px] bg-white rounded-sm flex justify-center items-center"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="size-[15px] text-[#FF7701]"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor">
+                    stroke="currentColor"
+                  >
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -91,16 +106,6 @@ const Header = async () => {
                   </svg>
                 </label>
               </div>
-            </div>
-            <NavBar linksData={linksData} />
-            <div className="navbar-end ">
-              <div className="hidden lg:block">
-                <ThemeSwitcher />
-              </div>
-              <div className="hidden lg:block">
-                <LanguageSelect />
-              </div>
-              <Profile />
             </div>
           </div>
         </div>

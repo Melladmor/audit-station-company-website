@@ -73,29 +73,15 @@
     @apply relative inline-block;
   }
 
-  .links::after {
-    content: "";
-    @apply absolute left-0 w-full h-[2px] bg-secondary;
-    bottom: -4px;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.2s ease-in-out;
-  }
-
-  .links:hover::after {
-    transform: scaleX(1);
+  .links:hover {
+    @apply text-secondary;
   }
   .links_active {
     @apply relative inline-block;
   }
 
   .links_active::after {
-    content: "";
-    @apply absolute left-0 w-full h-[2px] bg-secondary;
-    bottom: -4px;
-    transform: scaleX(1); /* Active state should always show the underline */
-    transform-origin: left;
-    transition: transform 0.2s ease-in-out;
+    @apply text-secondary;
   }
   .card_modal {
     @apply bg-white rounded-[20px] rounded-tl-[65px] xs:pb-[24px]  xl:w-[500px] lg:w-[500px] md:w-[500px] sm:w-[400px] xs:w-full xl:h-[380px] lg:h-[380px] md:h-[380px] sm:h-auto xs:h-auto relative;

@@ -24,10 +24,10 @@ export default function LanguageSelect() {
   }
 
   return (
-    <ul className="menu menu-horizontal px-1 lg:mx-2">
+    <ul className="menu menu-horizontal">
       <li>
         <details className="text-white">
-          <summary className="flex items-center">
+          <summary className="flex items-center [&::after]:hidden">
             <Image
               src={
                 selectedLang === "en"
@@ -37,22 +37,21 @@ export default function LanguageSelect() {
               alt="Flag"
               width={16}
               height={16}
-              className="w-4 h-4 rounded-sm"
+              className="size-7 rounded-full"
             />
-            <span className="ml-2">{selectedLang.toUpperCase()}</span>
           </summary>
-          <ul className="p-2 text-black">
+          <ul className="text-black w-28">
             {langs.map((item) => (
               <li key={item.id} onClick={() => onSelectChange(item.id)}>
-                <div className="flex items-center">
+                <div className="flex items-center gap-2">
                   <Image
                     src={item.avatar}
                     alt={item.name}
                     width={16}
                     height={16}
-                    className="w-4 h-4 rounded-sm"
+                    className="size-4"
                   />
-                  <span className="ml-2">{item.name}</span>
+                  <span>{item.name}</span>
                 </div>
               </li>
             ))}

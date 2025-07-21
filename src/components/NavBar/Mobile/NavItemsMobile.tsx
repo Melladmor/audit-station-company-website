@@ -2,14 +2,13 @@
 import React, { useState } from "react";
 import { NavLinkI } from "../type";
 import NavItemMobile from "./NavItemMobile";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
 import Link from "next/link";
-import { TbHomeFilled } from "react-icons/tb";
-import Logo from "../Components/Logo";
 import SwitcherMobile from "./SwitcherMobile";
 import Image from "next/image";
 import { usePathname, useRouter } from "@/i18n/routing";
+import Profile from "../Components/Profile";
 
 type Props = {
   linksData: NavLinkI[];
@@ -18,6 +17,7 @@ type Props = {
 const NavItemsMobile = ({ linksData }: Props) => {
   const locale = useLocale();
   const pathname = usePathname();
+  const t = useTranslations("navbarlinks");
   const splitedPathName = pathname.slice(`/${locale}`.length);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const langs = [
@@ -35,17 +35,16 @@ const NavItemsMobile = ({ linksData }: Props) => {
   };
   return (
     <div>
-      <div className="py-3 px-4 border-b border-gray-400 flex justify-between items-center w-full">
-        <Logo />
+      <div className="py-[17.5px] px-4 border-b border-gray-400 flex justify-between items-center w-full">
+        <Profile />
         <SwitcherMobile />
       </div>
       <div
         className={`links py-3 px-4 xl:text-[20px] lg:text-[16px] border-b border-gray-400 w-full ${
           splitedPathName === "" ? "text-secondary" : "text-white"
-        } `}>
-        <Link href="/">
-          <TbHomeFilled className="size-[25px]" />
-        </Link>
+        } `}
+      >
+        <Link href="/">{t("home")}</Link>
       </div>
       {linksData?.map((links: NavLinkI) => {
         return (
@@ -66,7 +65,8 @@ const NavItemsMobile = ({ linksData }: Props) => {
               locale === item?.id
                 ? "bg-secondary text-white"
                 : "bg-white text-black"
-            }`}>
+            }`}
+          >
             <div className="flex items-center">
               <Image
                 src={item.avatar}
