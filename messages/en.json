@@ -95,10 +95,11 @@
   },
   "statistics": {
     "inTheWorld": "In The World",
-    "yearsOfExperience": "Years Of Experience",
+    "yearsOfExperience": "Experience",
     "customers": "Customers",
     "satisfaction": "Satisfaction",
-    "overGcc": "Over GCC"
+    "overworld": "Over the World",
+    "yrs": "yrs"
   },
   "seemore": "See More",
   "readmore": "Read More",

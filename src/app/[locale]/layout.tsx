@@ -40,7 +40,8 @@ export default async function LocaleLayout({
       lang={locale}
       dir={locale === "en" ? "ltr" : "rtl"}
       className={`${poppins.className}`}
-      suppressHydrationWarning>
+      suppressHydrationWarning
+    >
       <body>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class">
@@ -48,7 +49,7 @@ export default async function LocaleLayout({
             <div className="bg-light-bodyBg dark:bg-dark-bodyBg xl:pb-[250px] lg:pb-[200px] md:pb-[100px] ">
               {children}
             </div>
-            <Footer />
+            {/* <Footer /> */}
           </ThemeProvider>
         </NextIntlClientProvider>
       </body>

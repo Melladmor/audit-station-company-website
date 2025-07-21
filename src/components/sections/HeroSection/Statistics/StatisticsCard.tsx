@@ -15,13 +15,14 @@ const StatisticsCard = ({ cardData, isLast }: Props) => {
         isLast
           ? "lg:col-span-1 md:col-span-2 sm:col-span-1 xs:col-span-1 border-none"
           : ""
-      }`}>
+      }`}
+    >
       <div className="xl:text-[40px] lg:text-[36px] md:text-[32px] sm:text-[28px] xs:text-[28px]  text-secondary font-[700]">
         {cardData.end ? (
           <CountStats
             start={cardData.start ? cardData?.start : 0}
             end={cardData.end}
-            duration={3}
+            duration={1.3}
           />
         ) : (
           ""

@@ -2,7 +2,8 @@ import React from "react";
 import { StatisticsI } from "./type.d";
 import StatisticsCard from "./StatisticsCard";
 import fetchPublicData from "@/lib/api/fetchPublicData";
-import { getTranslations } from "next-intl/server";
+import { getLocale, getTranslations } from "next-intl/server";
+import { useLocale } from "next-intl";
 type StatsData = {
   number_in_world: number;
   years_of_experience: number;
@@ -13,6 +14,7 @@ type StatsData = {
 
 const Statistics = async () => {
   const t = await getTranslations("statistics");
+  const locale = await getLocale();
   const statsData: StatsData = await fetchPublicData({
     url: "company_achievements",
   });
@@ -26,6 +28,7 @@ const Statistics = async () => {
     },
     {
       id: 2,
+      value: `+ ${locale === "en" ? t("yrs") : ""}`,
       title: t("yearsOfExperience"),
       start: 0,
       end: statsData?.years_of_experience,
@@ -47,7 +50,7 @@ const Statistics = async () => {
     {
       id: 5,
       value: statsData?.over_gcc,
-      title: t("overGcc"),
+      title: t("overworld"),
     },
   ];
 

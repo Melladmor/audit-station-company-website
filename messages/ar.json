@@ -97,9 +97,9 @@
   "statistics": {
     "inTheWorld": "في العالم",
     "yearsOfExperience": "سنوات الخبرة",
-    "customers": "العملاء",
-    "satisfaction": "الرضا",
-    "overGcc": "أنحاء الخليج"
+    "customers": "عميل",
+    "satisfaction": "رضا العملاء",
+    "overworld": " كل العالم"
   },
   "seemore": "رؤية المزيد",
   "readmore": "إقرأ المزيد",
