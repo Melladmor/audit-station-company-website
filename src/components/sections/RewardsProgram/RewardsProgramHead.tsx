@@ -3,7 +3,7 @@ import { getTranslations } from "next-intl/server";
 import React from "react";
 import { RewardsProgramI, RewardTierT } from "./type";
 import Progress from "../Progress/Progress";
-import { reverseArray } from "@/lib/helper/helper";
+import { reverseArray, truncateHtmlToText } from "@/lib/helper/helper";
 
 type Props = {
   data: RewardsProgramI;
@@ -19,9 +19,11 @@ const RewardsProgramHead = async ({ data }: Props) => {
           <h3 className="xl:text-[32px] lg:text-[32px] md:text-[26px] sm:text-[20px] xs:text-[16px] text-black font-[600]">
             {data?.title}
           </h3>
-          <p className="text-black xl:text-[20px] lg:text-[20px] md:text-[14px] sm:text-[14px] xs:text-[12px]">
-            {data?.description}
-          </p>
+          <div
+            className="text-black xl:text-[20px] lg:text-[20px] md:text-[14px] sm:text-[14px] xs:text-[12px]"
+            dangerouslySetInnerHTML={{
+              __html: truncateHtmlToText(data?.description, 145),
+            }}></div>
           <Button
             title={t("seemore")}
             isLink

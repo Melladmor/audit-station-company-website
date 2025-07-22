@@ -24,13 +24,14 @@ export default function HomePage() {
       <OurPlatform />
       <TrainingPrograms />
       <TaxStation />
+      <RewardsProgram />
       {/* 
       
       
       
       
       
-      <RewardsProgram />
+      
       <OurTeam />
       <News />
       <GoogleReviews />

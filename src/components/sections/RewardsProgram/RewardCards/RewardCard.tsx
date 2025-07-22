@@ -3,6 +3,7 @@ import React from "react";
 import { twMerge } from "tailwind-merge";
 import { RewardCardsI, SocialLinksT } from "./type";
 import Link from "next/link";
+import { truncateHtmlToText } from "@/lib/helper/helper";
 
 type Props = RewardCardsI;
 
@@ -45,21 +46,23 @@ const RewardCard = ({
         <h4 className="xl:text-[20px] lg:text-[20px] md:text-[18px] sm:text-[16px] xs:text-[16px] font-medium">
           {title}
         </h4>
-        <p
+        <div
           className={twMerge(
             "xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] xs:text-[12px]",
             subClassName
-          )}>
-          {subTitle}
-        </p>
+          )}
+          dangerouslySetInnerHTML={{
+            __html: truncateHtmlToText(subTitle, 150),
+          }}></div>
         {description && (
-          <p
+          <div
             className={twMerge(
               "xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] xs:text-[12px]",
               subClassName
-            )}>
-            {description}
-          </p>
+            )}
+            dangerouslySetInnerHTML={{
+              __html: truncateHtmlToText(description, 150),
+            }}></div>
         )}
         {links && links.length > 0 && (
           <div className="flex items-center gap-3 mt-[16px]">
