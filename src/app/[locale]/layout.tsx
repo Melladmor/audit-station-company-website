@@ -10,6 +10,7 @@ import "./globals.css";
 import "react-phone-input-2/lib/style.css";
 import "react-international-phone/style.css";
 import Footer from "@/components/Footer/Footer";
+import ToasterWrapper from "@/components/ClientWrapper/ToastWrapper";
 const poppins = Poppins({
   weight: "400",
   subsets: ["latin"],
@@ -40,12 +41,12 @@ export default async function LocaleLayout({
       lang={locale}
       dir={locale === "en" ? "ltr" : "rtl"}
       className={`${poppins.className}`}
-      suppressHydrationWarning
-    >
+      suppressHydrationWarning>
       <body>
         <NextIntlClientProvider messages={messages}>
           <ThemeProvider attribute="class">
             <Header />
+            <ToasterWrapper locale={locale} />
             <div className="bg-light-bodyBg dark:bg-dark-bodyBg xl:pb-[250px] lg:pb-[200px] md:pb-[100px] ">
               {children}
             </div>

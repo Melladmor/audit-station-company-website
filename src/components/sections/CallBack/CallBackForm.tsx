@@ -1,7 +1,7 @@
 "use client";
 
-import React from "react";
-import { useForm } from "react-hook-form";
+import React, { useState } from "react";
+import { Controller, useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useTranslations } from "next-intl";
@@ -10,13 +10,14 @@ import TextInput from "@/components/Inputs/Inputs/TextInput";
 import TextArea from "@/components/Inputs/Inputs/TextArea";
 import Phone from "@/components/Inputs/Inputs/Phone";
 import Button from "@/components/ui/Buttons/Button";
-
+import sendData from "@/lib/api/sendData";
+import toast from "react-hot-toast";
 const createFormSchema = (t: ReturnType<typeof useTranslations>) => {
   return z.object({
-    firstname: z
+    first_name: z
       .string()
       .min(1, { message: t("validations.firstname_required") }),
-    lastname: z
+    last_name: z
       .string()
       .min(1, { message: t("validations.lastname_required") }),
     email: z.string().email({ message: t("validations.email_invalid") }),
@@ -30,7 +31,7 @@ const createFormSchema = (t: ReturnType<typeof useTranslations>) => {
         },
         { message: t("validations.phone_invalid_length") }
       ),
-    companyName: z
+    company_name: z
       .string()
       .min(1, { message: t("validations.company_required") }),
     message: z.string().min(1, { message: t("validations.message_required") }),
@@ -42,17 +43,54 @@ type FormSchemaType = z.infer<ReturnType<typeof createFormSchema>>;
 const CallBackForm = () => {
   const t = useTranslations();
   const formSchema = createFormSchema(t);
-
+  const [loading, setLoading] = useState(false);
   const {
     register,
     handleSubmit,
+    control,
+    reset,
     formState: { errors },
   } = useForm<FormSchemaType>({
     resolver: zodResolver(formSchema),
+    defaultValues: {
+      first_name: "",
+      last_name: "",
+      email: "",
+      phone: "",
+      company_name: "",
+      message: "",
+    },
   });
 
-  const onSubmit = (data: FormSchemaType) => {
+  const onSubmit = async (data: FormSchemaType) => {
     console.log("Form Data:", data);
+
+    const today = new Date();
+    const formattedDate = today.toISOString().split("T")[0];
+
+    const formData = {
+      message_data: formattedDate,
+      ...data,
+    };
+
+    setLoading(true);
+    try {
+      await sendData({ data: formData, url: "contact_us" });
+      toast.success(t("messagesent"));
+      reset({
+        first_name: "",
+        last_name: "",
+        email: "",
+        phone: "",
+        company_name: "",
+        message: "",
+      });
+    } catch (error) {
+      toast.error(`${error}`);
+      console.log({ error });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -68,20 +106,20 @@ const CallBackForm = () => {
           icon="/icons/inputicons/user.svg"
           label={t("firstname")}
           required
-          name="firstname"
+          name="first_name"
           placeholder={t("firstname")}
-          register={register("firstname")}
-          error={errors.firstname?.message}
+          register={register("first_name")}
+          error={errors.first_name?.message}
         />
         <TextInput
           type="text"
           icon="/icons/inputicons/user.svg"
           label={t("lastname")}
           required
-          name="lastname"
+          name="last_name"
           placeholder={t("lastname")}
-          register={register("lastname")}
-          error={errors.lastname?.message}
+          register={register("last_name")}
+          error={errors.last_name?.message}
         />
         <TextInput
           type="email"
@@ -93,23 +131,30 @@ const CallBackForm = () => {
           register={register("email")}
           error={errors.email?.message}
         />
-        <Phone
+        <Controller
           name="phone"
-          icon="/icons/inputicons/phone.svg"
-          label={t("phonenumber")}
-          required
-          register={register("phone")}
-          error={errors.phone?.message}
+          control={control}
+          render={({ field }) => (
+            <Phone
+              name={field.name}
+              icon="/icons/inputicons/phone.svg"
+              label={t("phonenumber")}
+              required
+              value={field.value}
+              onChange={field.onChange}
+              error={errors.phone?.message}
+            />
+          )}
         />
         <TextInput
           type="text"
           icon="/icons/inputicons/company.svg"
           label={t("companyname")}
           required
-          name="companyName"
+          name="company_name"
           placeholder={t("companyname")}
-          register={register("companyName")}
-          error={errors.companyName?.message}
+          register={register("company_name")}
+          error={errors.company_name?.message}
         />
         <TextArea
           label={t("yourmessage")}
@@ -123,6 +168,7 @@ const CallBackForm = () => {
           <Button
             title={t("submit")}
             className="btn_size !bg-black !text-white hover:!bg-secondary"
+            isLoading={loading}
           />
         </div>
       </form>
