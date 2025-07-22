@@ -94,12 +94,12 @@
   }
 
   .cutout-circle {
-    @apply absolute top-[-28px] left-[-28px] xl:w-[160px] xl:h-[160px] lg:w-[160px] lg:h-[160px] md:w-[160px] md:h-[160px] sm:w-[130px] sm:h-[130px] xs:w-[130px] xs:h-[130px] bg-[#D9D9D9]  rounded-full flex items-center justify-center;
+    @apply absolute top-[-28px] left-[-28px] xl:w-[160px] xl:h-[160px] lg:w-[160px] lg:h-[160px] md:w-[160px] md:h-[160px] sm:w-[130px] sm:h-[130px] xs:w-[130px] xs:h-[130px] bg-[#D9D9D9] dark:bg-[#18242e]  rounded-full flex items-center justify-center;
   }
 
   .cutout-circle::before {
     content: "";
-    @apply absolute z-30 top-1/2 left-1/2 w-full h-full rounded-full border-[13px] border-[#D9D9D9]  transform -translate-x-1/2 -translate-y-1/2;
+    @apply absolute z-30 top-1/2 left-1/2 w-full h-full rounded-full border-[13px] border-[#D9D9D9] dark:border-[#18242e]  transform -translate-x-1/2 -translate-y-1/2;
   }
   .image_circle {
     @apply absolute top-[-5px] left-[-5px] xl:w-[120px] xl:h-[120px] lg:w-[120px] lg:h-[120px] md:w-[120px] md:h-[120px] sm:w-[90px] sm:h-[90px] xs:w-[90px] xs:h-[90px] bg-white rounded-full z-40 shadow-md flex justify-center items-center;

@@ -5,6 +5,7 @@ import Image from "next/image";
 import CtaButton from "@/components/ui/Buttons/CtaButton";
 import { useTranslations } from "next-intl";
 import { useFetchClient } from "@/hooks/useFetchClient";
+import Button from "@/components/ui/Buttons/Button";
 
 interface ModalProps {
   id: number | null;
@@ -37,7 +38,7 @@ const OurServciesModal: React.FC<ModalProps> = ({ id, onClose }) => {
       id="modal-overlay"
       className="fixed inset-0 xs:px-[15px] bg-black bg-opacity-50 flex items-center justify-center z-50"
     >
-      <div className="card_modal">
+      <div className="card_modal bg-white dark:bg-black">
         <div className="card_modal_cutout_section">
           <div className="cutout-circle"></div>
           <div className="z-50">
@@ -51,7 +52,7 @@ const OurServciesModal: React.FC<ModalProps> = ({ id, onClose }) => {
           <Image
             loading="lazy"
             className="xl:size-[100px] lg:size-[100px] md:size-[100px] sm:size-[70px] xs:size-[70px]"
-            src="/logos/servicespopup.svg"
+            src="/logos/auditlogoblack.svg"
             alt=""
             width={100}
             height={100}
@@ -63,20 +64,21 @@ const OurServciesModal: React.FC<ModalProps> = ({ id, onClose }) => {
           </div>
         ) : (
           <div className="xl:px-[56px] lg:px-[56px] md:px-[56px] sm:px-[25px] xs:px-[25px] flex flex-col justify-center items-center xl:gap-6 lg:gap-6 md:gap-6 sm:gap-4 xs:gap-4">
-            <h2 className="text-[20px] text-black font-bold">
+            <h2 className="text-[20px] text-light-text dark:text-dark-text font-bold">
               {returnedData?.name}
             </h2>
             <p
-              className="text-black text-[16px] w-full text-center"
+              className="text-light-text dark:text-dark-text text-[16px] w-full text-center"
               dangerouslySetInnerHTML={{
                 __html: `${returnedData?.description}`,
               }}
             ></p>
-            <CtaButton
+            <Button
               isLink
               not_blank
               path={`services/${id}`}
               title={t("readdetails")}
+              className="bg-secondary text-white hover:bg-black"
             />
           </div>
         )}
