@@ -20,11 +20,12 @@ export default function HomePage() {
       <OurHappyCustomers />
       <AboutUsSection />
       <OurServicesSection />
+      <PackagesSection />
+      <OurPlatform />
       {/* 
       
       
-      <PackagesSection />
-      <OurPlatform />
+      
       <TrainingPrograms />
       <TaxStation />
       <RewardsProgram />

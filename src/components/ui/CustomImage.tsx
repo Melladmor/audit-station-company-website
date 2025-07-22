@@ -22,7 +22,7 @@ function CustomImage({
           setImgSrc(emptyImageUrl);
         }
       }}
-      className={twMerge("object-cover", className)}
+      className={twMerge("object-contain", className)}
     />
   );
 }

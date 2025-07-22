@@ -5,23 +5,16 @@ import OurPlatformHead from "./OurPlatformHead";
 import { OurPlatformI } from "./type";
 import OurPlatformVideo from "./OurPlatformVideo";
 import Button from "@/components/ui/Buttons/Button";
+import fetchPublicData from "@/lib/api/fetchPublicData";
 // import fetchPublicData from "@/lib/api/fetchPublicData";
 
 const OurPlatform = async () => {
   const t = await getTranslations("sections.ourplatform");
   const btnTitle = await getTranslations();
-  // const ourPlatformData2 = await fetchPublicData({
-  //   url: "our_platforms",
-  // });
+  const ourPlatformData = await fetchPublicData({
+    url: "our_platforms",
+  });
 
-  const ourPlatformData: OurPlatformI = {
-    id: 1,
-    image: "/images/slide.jpg",
-    title: "Audit Station ’’Your Gateway to Smart Financial Solutions’’",
-    description:
-      "Audit Station simplifies auditing and tax consultancy with innovative solutions, ensuring accuracy, compliance, and business growth, We Can empowers businesses with seamless financial management.",
-    video: "/videos/audit.mp4",
-  };
   return (
     <CustomSection
       title={{
