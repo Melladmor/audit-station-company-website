@@ -23,12 +23,13 @@ export default function HomePage() {
       <PackagesSection />
       <OurPlatform />
       <TrainingPrograms />
+      <TaxStation />
       {/* 
       
       
       
       
-      <TaxStation />
+      
       <RewardsProgram />
       <OurTeam />
       <News />

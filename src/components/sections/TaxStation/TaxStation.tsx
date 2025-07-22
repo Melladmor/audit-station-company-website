@@ -18,7 +18,7 @@ const TaxStation = async () => {
       <Title
         first={t("first")}
         second={t("second")}
-        subTitle={taxStationData?.description}
+        subTitle={taxStationData?.title}
         subTitleClass="text-white dark:text-black"
         firstClass="text-white dark:text-black"
       />

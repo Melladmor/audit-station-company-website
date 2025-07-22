@@ -23,12 +23,12 @@ const TrainingProgramHead = async ({ discription, image, title }: Props) => {
         <h3 className="xl:text-[32px] lg:text-[32px] md:text-[26px] sm:text-[20px] xs:text-[16px] text-black font-[600]">
           {title}
         </h3>
-        <p
+        <div
           className="text-black xl:text-[20px] lg:text-[20px] md:text-[14px] sm:text-[14px] xs:text-[12px]"
           dangerouslySetInnerHTML={{
             __html: truncateHtmlToText(discription, 150),
           }}
-        ></p>
+        ></div>
         <Button
           title={t("contactus")}
           isLink
