@@ -1,4 +1,4 @@
-import DOMPurify from "dompurify";
+import truncate from "html-truncate";
 
 export const reverseArray = <T>(arr: T[]): T[] => {
   if (arr) {
@@ -7,16 +7,11 @@ export const reverseArray = <T>(arr: T[]): T[] => {
     return [];
   }
 };
+
 export function truncateHtmlToText(
-  htmlString: string,
-  maxLength: number = 100
+  html: string,
+  maxLength: number = 100,
+  ellipsis = "..."
 ): string {
-  if (typeof window === "undefined") return ""; // Prevent SSR issues
-
-  const tempDiv = document.createElement("div");
-  tempDiv.innerHTML = DOMPurify.sanitize(htmlString);
-  const plainText = tempDiv.textContent || tempDiv.innerText || "";
-  const sliced = plainText.slice(0, maxLength);
-
-  return DOMPurify.sanitize(sliced); // Sanitize again for safety
+  return truncate(html, maxLength, { ellipsis });
 }

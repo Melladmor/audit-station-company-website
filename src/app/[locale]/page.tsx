@@ -18,8 +18,9 @@ export default function HomePage() {
     <>
       <HeroSection />
       <OurHappyCustomers />
-      {/* 
       <AboutUsSection />
+      {/* 
+      
       <OurServicesSection />
       <PackagesSection />
       <OurPlatform />

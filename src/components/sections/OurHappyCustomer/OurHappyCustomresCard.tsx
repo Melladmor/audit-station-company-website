@@ -42,7 +42,7 @@ function OurHappyCustomresCard({
       <Tooltip content={description}>
         <div
           dangerouslySetInnerHTML={{
-            __html: `${truncateHtmlToText(description, 70)}...`,
+            __html: truncateHtmlToText(description, 70),
           }}
           className="text-light-text dark:text-dark-text xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[14px] xs:text-[14px] text-center max-w-[300px]"
         ></div>
