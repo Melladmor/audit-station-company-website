@@ -63,8 +63,6 @@ const CallBackForm = () => {
   });
 
   const onSubmit = async (data: FormSchemaType) => {
-    console.log("Form Data:", data);
-
     const today = new Date();
     const formattedDate = today.toISOString().split("T")[0];
 
@@ -87,7 +85,6 @@ const CallBackForm = () => {
       });
     } catch (error) {
       toast.error(`${error}`);
-      console.log({ error });
     } finally {
       setLoading(false);
     }

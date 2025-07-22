@@ -5,13 +5,11 @@ import TrainingProgramHead from "./TrainingProgramHead";
 import { OurPlatformI } from "../OurPlatform/type";
 import TrainingProgramDiscover from "./TrainingProgramDiscover";
 import fetchPublicData from "@/lib/api/fetchPublicData";
-// import fetchPublicData from "@/lib/api/fetchPublicData";
 const TrainingPrograms = async () => {
   const t = await getTranslations("sections.trainingprograms");
   const trainingProgramData = await fetchPublicData({
     url: "our_training_programs",
   });
-  console.log({ trainingProgramData });
   const trainingProgramHeadData: Omit<OurPlatformI, "id" | "video"> = {
     image: trainingProgramData?.image,
     title: trainingProgramData?.title_visit_audit_station,
@@ -29,8 +27,7 @@ const TrainingPrograms = async () => {
         second: t("second"),
         subTitle: t("subTitle"),
       }}
-      className="mt-[100px]"
-    >
+      className="mt-[100px]">
       <TrainingProgramHead
         title={trainingProgramHeadData?.title}
         discription={trainingProgramHeadData?.description}
