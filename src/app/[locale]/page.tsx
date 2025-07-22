@@ -25,6 +25,9 @@ export default function HomePage() {
       <TrainingPrograms />
       <TaxStation />
       <RewardsProgram />
+      <OurTeam />
+      <News />
+      <CallBack />
       {/* 
       
       
@@ -32,10 +35,9 @@ export default function HomePage() {
       
       
       
-      <OurTeam />
-      <News />
+      
       <GoogleReviews />
-      <CallBack /> */}
+       */}
     </>
   );
 }
