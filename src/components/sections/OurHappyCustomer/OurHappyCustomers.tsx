@@ -16,7 +16,8 @@ const OurHappyCustomers = async () => {
         second: t("second"),
         subTitle: t("subTitle"),
       }}
-      className="mt-[100px]">
+      className="mt-[100px]"
+    >
       <OurHappyCustomersContainer data={happyCustomerData} />
     </CustomSection>
   );

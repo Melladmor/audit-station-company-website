@@ -65,7 +65,8 @@ export default function Slider<T>({
       {nextAndPrev && !isSmall && (
         <button
           ref={prevRef}
-          className="absolute left-[-60px] top-1/2 z-10 -translate-y-1/2 bg-secondary hover:bg-dark-background dark:hover:bg-light-background hover:dark:text-light-text text-dark-text disabled:bg-gray-400 disabled:cursor-not-allowed size-[40px] flex justify-center items-center rounded-full">
+          className="absolute left-[-60px] top-1/2 z-10 -translate-y-1/2 bg-secondary hover:bg-dark-background dark:hover:bg-light-background hover:dark:text-light-text text-dark-text disabled:bg-gray-400 disabled:cursor-not-allowed size-[40px] flex justify-center items-center rounded-full"
+        >
           <FaChevronLeft />
         </button>
       )}
@@ -73,7 +74,8 @@ export default function Slider<T>({
       {nextAndPrev && !isSmall && (
         <button
           ref={nextRef}
-          className="absolute right-[-60px] top-1/2 z-10 -translate-y-1/2 bg-secondary hover:bg-dark-background dark:hover:bg-light-background hover:dark:text-light-text text-dark-text disabled:cursor-not-allowed size-[40px] flex justify-center items-center rounded-full">
+          className="absolute right-[-60px] top-1/2 z-10 -translate-y-1/2 bg-secondary hover:bg-dark-background dark:hover:bg-light-background hover:dark:text-light-text text-dark-text disabled:cursor-not-allowed size-[40px] flex justify-center items-center rounded-full"
+        >
           <FaChevronRight />
         </button>
       )}
@@ -103,9 +105,15 @@ export default function Slider<T>({
             swiper.params.navigation.prevEl = prevRef.current!;
             swiper.params.navigation.nextEl = nextRef.current!;
           }
-        }}>
+        }}
+      >
         {initialData.map((item, index) => (
-          <SwiperSlide key={index}>{renderItem(item)}</SwiperSlide>
+          <SwiperSlide
+            key={index}
+            className="xl:mx-1 lg:mx-1 md:mx-0 sm:mx-0 xs:mx-0 "
+          >
+            {renderItem(item)}
+          </SwiperSlide>
         ))}
       </Swiper>
     </div>

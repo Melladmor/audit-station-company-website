@@ -17,7 +17,8 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      {/* <OurHappyCustomers />
+      <OurHappyCustomers />
+      {/* 
       <AboutUsSection />
       <OurServicesSection />
       <PackagesSection />

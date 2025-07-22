@@ -5,18 +5,21 @@ import OurHappyCustomresCard from "./OurHappyCustomresCard";
 import { OurHappyCustomersI } from "./type";
 import Button from "@/components/ui/Buttons/Button";
 import { useTranslations } from "next-intl";
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 type Props = {
   data: OurHappyCustomersI[];
 };
 export function OurHappyCustomersContainer({ data }: Props) {
   const t = useTranslations();
+  const isLargeScreen = useMediaQuery("(min-width:1200px)");
   return (
     <div>
       <Slider
         initialData={data}
         slidePerViewXl={3}
         slidePerViewLg={2}
+        spaceBetween={isLargeScreen ? 80 : 20}
         renderItem={(item) => {
           return <OurHappyCustomresCard key={item?.id} {...item} />;
         }}

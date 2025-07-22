@@ -7,6 +7,6 @@ export interface OurHappyCustomersI {
   name: string;
   logo: string;
   category?: string;
-  sub_category?: string;
+  subCategory?: string;
   description: string;
 }
