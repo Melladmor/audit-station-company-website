@@ -22,11 +22,12 @@ export default function HomePage() {
       <OurServicesSection />
       <PackagesSection />
       <OurPlatform />
+      <TrainingPrograms />
       {/* 
       
       
       
-      <TrainingPrograms />
+      
       <TaxStation />
       <RewardsProgram />
       <OurTeam />
