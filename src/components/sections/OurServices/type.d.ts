@@ -1,8 +1,8 @@
 export type SubServicesT = {
   id: number;
-  title: string;
-  description?: string;
-  cta?: string;
+  name: string;
+  // description?: string;
+  // cta?: string;
 };
 
 export interface OurServicesI {
@@ -12,3 +12,17 @@ export interface OurServicesI {
   subServices: SubServicesT[];
   className?: string;
 }
+
+export interface MainServicesI {
+  id: number;
+  name: string;
+  our_services: subServicesI[];
+}
+
+export interface subServicesI extends MainServicesI {}
+
+export type ModalServiceDataT = {
+  id: number | string;
+  name: string;
+  description: string;
+};
