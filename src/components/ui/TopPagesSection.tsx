@@ -11,8 +11,9 @@ const TopPagesSection = async (props: Props) => {
     <div
       className="w-full xl:h-[320px] lg:h-[320px] md:h-[320px] sm:h-[220px] xs:h-[220px] bg-cover bg-center relative"
       style={{
-        backgroundImage: "url('/images/slide2.jpg')",
-      }}>
+        backgroundImage: "url('/images/slide.jpg')",
+      }}
+    >
       <div className="absolute inset-0 backdrop-blur-[3px] bg-white/30 z-10" />
 
       <div className="relative z-20 flex items-center justify-center h-full ">

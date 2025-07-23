@@ -1,5 +1,5 @@
 import CustomSection from "@/components/ui/CustomSection/CustomSection";
-import { AboutUsDataT } from "@/components/sections/AboutUs/type";
+// import { AboutUsDataT } from "@/components/sections/AboutUs/type";
 import TopPagesSection from "@/components/ui/TopPagesSection";
 import fetchPublicData from "@/lib/api/fetchPublicData";
 import { getTranslations } from "next-intl/server";
@@ -8,9 +8,12 @@ import Title from "@/components/ui/Title/Title";
 import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
 import Button from "@/components/ui/Buttons/Button";
 import { TbBrandWhatsappFilled } from "react-icons/tb";
+import { AboutUsPageDetailesT } from "@/components/sections/AboutUs/type";
 
 const page = async () => {
-  const aboutUsData: AboutUsDataT = await fetchPublicData({ url: "about_us" });
+  const aboutUsData: AboutUsPageDetailesT = await fetchPublicData({
+    url: "about_us_details",
+  });
   const t = await getTranslations();
   return (
     <div>
@@ -19,17 +22,18 @@ const page = async () => {
         <div className="flex flex-col gap-12">
           <div className="flex flex-col gap-4">
             <h1 className="text-[24px] font-[700] text-light-text dark:text-dark-text">
-              {aboutUsData?.title_about}
+              {aboutUsData?.title_details}
             </h1>
             <p
               dangerouslySetInnerHTML={{
-                __html: aboutUsData?.description_about,
+                __html: aboutUsData?.description_details,
               }}
-              className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text"></p>
+              className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text"
+            ></p>
           </div>
           <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 gap-6">
             <div>
-              <ImageComp url="/images/slide2.jpg" />
+              <ImageComp url={aboutUsData?.image_vission} />
             </div>
             <div className="flex flex-col gap-4">
               <Title
@@ -41,7 +45,8 @@ const page = async () => {
                 dangerouslySetInnerHTML={{
                   __html: aboutUsData?.description_vision,
                 }}
-                className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text"></p>
+                className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text"
+              ></p>
             </div>
           </div>
 
@@ -56,10 +61,11 @@ const page = async () => {
                 dangerouslySetInnerHTML={{
                   __html: aboutUsData?.description_mission,
                 }}
-                className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text"></p>
+                className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text"
+              ></p>
             </div>
             <div>
-              <ImageComp url="/images/slide.jpg" />
+              <ImageComp url={aboutUsData?.image_mission} />
             </div>
           </div>
           <div className="flex flex-col gap-4">
@@ -73,7 +79,7 @@ const page = async () => {
             </p>
             <div>
               <VideoPlayer
-                videoLink={aboutUsData?.youtube_link}
+                videoLink={aboutUsData?.youtube_link_details}
                 customClass="xl:!h-[472px] lg:!h-[472px]  md:!h-[400px] sm:!h-[350px] xs:!h-[350px]   !rounded-[16px]"
               />
             </div>
