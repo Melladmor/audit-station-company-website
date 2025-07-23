@@ -40,7 +40,7 @@ const Header = async () => {
     {
       id: 3,
       title: t("platform"),
-      url: "platform",
+      url: "our-platform",
       isPage: true,
     },
     {

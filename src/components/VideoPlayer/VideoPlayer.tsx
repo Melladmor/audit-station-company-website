@@ -46,15 +46,17 @@ const VideoPlayer = ({ videoLink, customClass }: Props) => {
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen
-            className={twMerge("video_h_w object-cover", customClass)}></iframe>
+            className={twMerge("video_h_w object-cover", customClass)}
+          ></iframe>
         </div>
       ) : (
         <div className={twMerge("video_h_w relative ", customClass)}>
           <video
             ref={videoRef}
-            className={twMerge("video_h_w object-cover", customClass)}
+            className={twMerge("video_h_w bg-black", customClass)}
             preload="none"
-            controls={false}>
+            controls={false}
+          >
             <source src={videoLink} type="video/mp4" />
           </video>
 

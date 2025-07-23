@@ -24,12 +24,12 @@ const page = async () => {
             <h1 className="text-[24px] font-[700] text-light-text dark:text-dark-text">
               {aboutUsData?.title_details}
             </h1>
-            <p
+            <div
               dangerouslySetInnerHTML={{
                 __html: aboutUsData?.description_details,
               }}
               className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text"
-            ></p>
+            ></div>
           </div>
           <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 gap-6">
             <div>
@@ -41,12 +41,12 @@ const page = async () => {
                 customTitleIcon="/icons/vission.svg"
                 className="!items-start !mb-0"
               />
-              <p
+              <div
                 dangerouslySetInnerHTML={{
                   __html: aboutUsData?.description_vision,
                 }}
                 className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text"
-              ></p>
+              ></div>
             </div>
           </div>
 
@@ -57,12 +57,12 @@ const page = async () => {
                 customTitleIcon="/icons/mission.svg"
                 className="!items-start !mb-0"
               />
-              <p
+              <div
                 dangerouslySetInnerHTML={{
                   __html: aboutUsData?.description_mission,
                 }}
                 className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text"
-              ></p>
+              ></div>
             </div>
             <div>
               <ImageComp url={aboutUsData?.image_mission} />
@@ -80,7 +80,7 @@ const page = async () => {
             <div>
               <VideoPlayer
                 videoLink={aboutUsData?.youtube_link_details}
-                customClass="xl:!h-[472px] lg:!h-[472px]  md:!h-[400px] sm:!h-[350px] xs:!h-[350px]   !rounded-[16px]"
+                customClass="!border-[#B3B6B8] !border-[1px] xl:!h-[472px] lg:!h-[472px]  md:!h-[400px] sm:!h-[350px] xs:!h-[350px]   !rounded-[16px]"
               />
             </div>
           </div>
@@ -89,7 +89,7 @@ const page = async () => {
               title={t("contactwhatsapp")}
               icon={<TbBrandWhatsappFilled className="size-[24px]" />}
               isLink
-              path="https://wa.me/971501234567"
+              path="https://wa.me/971586028902"
               className="btn_size bg-secondary dark:bg-secondary hover:bg-black dark:hover:bg-white text-dark-text dark:text-dark-text dark:hover:text-black"
             />
           </div>
