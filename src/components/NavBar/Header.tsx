@@ -46,7 +46,7 @@ const Header = async () => {
     {
       id: 4,
       title: t("training"),
-      url: "training",
+      url: "our-training-programs",
       isPage: true,
     },
     {

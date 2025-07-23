@@ -18,6 +18,8 @@ const page = async () => {
         description={taxStationData?.description}
         video={taxStationData?.video}
         subTitle={t("connectWithAgent")}
+        buttonTitle="downloadapp"
+        buttonLink="https://auditstation.io"
       />
     </div>
   );
