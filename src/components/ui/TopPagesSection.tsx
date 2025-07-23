@@ -18,7 +18,7 @@ const TopPagesSection = async (props: Props) => {
 
       <div className="relative z-20 flex items-center justify-center h-full ">
         <div className="relative ">
-          <h1 className="xl:text-[64px] lg:text-[64px] md:text-[64px] sm:text-[45px] xs:text-[45px] font-[700] capitalize text-white">
+          <h1 className="xl:text-[64px] lg:text-[64px] md:text-[64px] sm:text-[45px] xs:text-[30px] font-[700] capitalize text-black">
             {props.title}
           </h1>
           <p className="text-secondary capitalize text-[16px] font-[700] absolute right-[-20px] bottom-[-20px]">

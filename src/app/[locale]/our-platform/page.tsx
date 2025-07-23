@@ -4,10 +4,14 @@ import React from "react";
 import { PlatformT } from "../type";
 import TopPagesSection from "@/components/ui/TopPagesSection";
 import OurComponent from "@/components/OurComponent/OurComponent";
+import { ImageSliderItemT } from "@/components/ui/Slider/type";
 
 const page = async () => {
   const ourPlatformData: PlatformT = await fetchPublicData({
     url: "our_platforms",
+  });
+  const slider: ImageSliderItemT[] = await fetchPublicData({
+    url: "our_platform_sliders",
   });
 
   const t = await getTranslations();
@@ -19,6 +23,7 @@ const page = async () => {
         description={ourPlatformData?.description}
         video={ourPlatformData?.video}
         image={ourPlatformData?.image}
+        slider={slider}
         buttonTitle="visitaudit"
         buttonLink="https://auditstation.io"
       />

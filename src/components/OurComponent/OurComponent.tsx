@@ -5,6 +5,8 @@ import VideoPlayer from "../VideoPlayer/VideoPlayer";
 import Button from "../ui/Buttons/Button";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import PageSliderContainer from "../ui/Slider/PageSliderContainer";
+import { ImageSliderItemT } from "../ui/Slider/type";
 
 type Props = {
   title: string;
@@ -14,6 +16,7 @@ type Props = {
   buttonTitle: string;
   buttonLink: string;
   image?: string;
+  slider?: ImageSliderItemT[];
 };
 
 const OurComponent = ({
@@ -24,6 +27,7 @@ const OurComponent = ({
   buttonTitle,
   buttonLink,
   image,
+  slider,
 }: Props) => {
   const t = useTranslations();
   return (
@@ -51,6 +55,7 @@ const OurComponent = ({
             </p>
           )}
         </div>
+        {slider && <PageSliderContainer data={slider} />}
         <div
           dangerouslySetInnerHTML={{
             __html: description,
