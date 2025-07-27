@@ -6,7 +6,7 @@ type Props = {
 
 const ImageComp = ({ url }: Props) => {
   return (
-    <div className="p-[24px] rounded-tl-[16px] bg-[#D8F0C4] xl:h-[400px] lg:h-[400px] md:h-[350px] sm:h-[300px] xs:h-[300px]">
+    <div className="p-[24px] rounded-tl-[16px] bg-[#f6e2d0] xl:h-[400px] lg:h-[400px] md:h-[350px] sm:h-[300px] xs:h-[300px]">
       <Image
         src={url}
         alt={url}

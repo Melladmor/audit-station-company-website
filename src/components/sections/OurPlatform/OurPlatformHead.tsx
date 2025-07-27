@@ -13,7 +13,7 @@ const OurPlatformHead = ({ description, image, title }: Props) => {
   return (
     <div className="flex xl:flex-nowrap lg:flex-nowrap sm:flex-wrap xs:flex-wrap gap-[24px]  items-start mb-[32px]">
       <div className="xl:h-[628px] lg:h-[628px] md:h-[450px] sm:h-[400px] xs:h-[300px] w-full relative">
-        <div className="w-[90%] h-[90%] absolute ltr:right-0 rtl:left-0 top-0 bg-[#ECF8E3]"></div>
+        <div className="w-[90%] h-[90%] absolute ltr:right-0 rtl:left-0 top-0 bg-[#f6e2d0]"></div>
         <div className="w-[90%] h-[90%] absolute ltr:left-0 rtl:right-0 bottom-0 bg-white border border-secondary xl:rounded-[0px_200px] lg:rounded-[0px_200px] md:rounded-[0px_200px] sm:rounded-[0px_100px] xs:rounded-[0px_100px] p-[30px]">
           <CustomImage url={image} className="size-full" />
         </div>

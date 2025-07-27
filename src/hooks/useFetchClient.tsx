@@ -3,26 +3,35 @@ import { useEffect, useState } from "react";
 
 interface UseFetchParams {
   url: string;
+  slug?: string;
 }
-
+export interface PaginationMeta {
+  current_page: number;
+  from: number;
+  last_page: number;
+  total: number;
+}
 interface UseFetchResult<T> {
   data: T | null;
   loading: boolean;
   error: Error | null;
+  meta: PaginationMeta | null;
 }
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
 export function useFetchClient<T = any>({
   url,
+  slug = "public",
 }: UseFetchParams): UseFetchResult<T> {
   const [data, setData] = useState<T | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [meta, setMeta] = useState<PaginationMeta | null>(null);
+  const [loading, setLoading] = useState(!!url);
   const [error, setError] = useState<Error | null>(null);
   const locale = useLocale();
 
   useEffect(() => {
-    if (!url) return;
+    if (!url || url === "") return;
 
     const controller = new AbortController();
 
@@ -31,7 +40,7 @@ export function useFetchClient<T = any>({
       setError(null);
 
       try {
-        const res = await fetch(`${API_BASE_URL}/api/public/${url}`, {
+        const res = await fetch(`${API_BASE_URL}/api/${slug}/${url}`, {
           headers: {
             Accept: "application/json",
             "Content-Type": "application/json",
@@ -45,6 +54,10 @@ export function useFetchClient<T = any>({
         }
 
         const json = await res.json();
+        console.log({ json });
+        console.log("json", json?.meta);
+
+        setMeta(json.meta);
         setData(json.data);
       } catch (err: any) {
         if (err.name !== "AbortError") {
@@ -60,5 +73,5 @@ export function useFetchClient<T = any>({
     return () => controller.abort();
   }, [url, locale]);
 
-  return { data, loading, error };
+  return { data, loading, error, meta };
 }

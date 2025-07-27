@@ -9,4 +9,5 @@ export interface OurHappyCustomersI {
   category?: string;
   subCategory?: string;
   description: string;
+  website_link?: string;
 }

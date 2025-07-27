@@ -139,5 +139,9 @@
   "taxstation": "محطة الضرائب",
   "messagesent": "تم الأرسال",
   "descoverourplatform": "اكتشف منصتنا",
-  "our-training-programs": "اكتشف برامجنا التدريبية"
+  "our-training-programs": "اكتشف برامجنا التدريبية",
+  "filterby": "فلترة حسب",
+  "category": "الفئة",
+  "subCategory": "الفئة الفرعية",
+  "loading": "انتظار..."
 }

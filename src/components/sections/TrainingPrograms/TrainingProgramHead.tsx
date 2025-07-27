@@ -19,7 +19,7 @@ const TrainingProgramHead = async ({ discription, image, title }: Props) => {
           backgroundImage: `url(${image})`,
         }}
       ></div>
-      <div className="xl:w-[621px] lg:w-[600px] md:w-[500px] sm:w-full xs:w-full xl:h-[90%] lg:h-[90%] md:h-[90%] sm:h-[90%] xs:h-full  absolute ltr:right-0 rtl:left-0 top-[5%] bg-[#ECF8E3] shadow-light flex flex-col gap-[14px] px-[24px] xl:py-[60px] lg:py-[60px] md:py-[60px] sm:py-[40px] xs:py-[20px] items-center justify-center text-center">
+      <div className="xl:w-[621px] lg:w-[600px] md:w-[500px] sm:w-full xs:w-full xl:h-[90%] lg:h-[90%] md:h-[90%] sm:h-[90%] xs:h-full  absolute ltr:right-0 rtl:left-0 top-[5%] bg-[#f6e2d0] shadow-light flex flex-col gap-[14px] px-[24px] xl:py-[60px] lg:py-[60px] md:py-[60px] sm:py-[40px] xs:py-[20px] items-center justify-center text-center">
         <h3 className="xl:text-[32px] lg:text-[32px] md:text-[26px] sm:text-[20px] xs:text-[16px] text-black font-[600]">
           {title}
         </h3>

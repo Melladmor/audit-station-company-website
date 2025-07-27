@@ -139,5 +139,9 @@
   "taxstation": "Tax Station",
   "messagesent": "Message Sent",
   "descoverourplatform": "Discover Our Platform",
-  "our-training-programs": "Discover Our Training Programs"
+  "our-training-programs": "Discover Our Training Programs",
+  "filterby": "Filter By",
+  "category": "Category",
+  "subCategory": "Sub Category",
+  "loading": "Loading..."
 }
