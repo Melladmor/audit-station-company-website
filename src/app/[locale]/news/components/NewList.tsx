@@ -51,7 +51,7 @@ export default function NewList({
     : [];
   return (
     <div className="w-full">
-      <div className="flex gap-6 w-full flex-wrap h-[100vh] !overflow-y-scroll">
+      <div className="flex gap-6 w-full flex-wrap h-[80vh] !overflow-y-scroll">
         {newsData?.map((news: NewsI) => (
           <NewsCard key={news.id} {...news} />
         ))}

@@ -11,7 +11,7 @@ export default async function newsLayout({
       <CustomSection className="py-[86px]">
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="w-full lg:w-[274px] shrink-0">
-            <FilterLayout url_route="blogs" />
+            <FilterLayout url_route="news" />
           </div>
 
           <div className="flex-1 w-full">{children}</div>

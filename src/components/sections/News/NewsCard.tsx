@@ -25,9 +25,9 @@ const NewsCard = ({
   return (
     <div className="bg-light-background dark:bg-dark-background rounded-[16px] max-w-[411px] border-[1px]    h-fit">
       <div className="relative">
-        <button className="bg-white text-[#757575] hover:text-red-600 xl:size-[40px] lg:size-[40px] md:size-[40px] sm:size-[30px] xs:size-[30px] flex justify-center items-center rounded-full absolute xl:top-[24px] lg:top-[24px] md:top-[24px] sm:top-[14px] xs:top-[14px] xl:right-[24px] lg:right-[24px] md:right-[24px] sm:right-[14px] xs:right-[14px]">
+        {/* <button className="bg-white text-[#757575] hover:text-red-600 xl:size-[40px] lg:size-[40px] md:size-[40px] sm:size-[30px] xs:size-[30px] flex justify-center items-center rounded-full absolute xl:top-[24px] lg:top-[24px] md:top-[24px] sm:top-[14px] xs:top-[14px] xl:right-[24px] lg:right-[24px] md:right-[24px] sm:right-[14px] xs:right-[14px]">
           <MdFavorite className="xl:size-[24px] lg:size-[24px] md:size-[24px] sm:size-[20px] xs:size-[20px]" />
-        </button>
+        </button> */}
         <Image
           src={image}
           alt=""

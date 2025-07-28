@@ -32,7 +32,7 @@ export default function HappyCustomersList({
 
   return (
     <div>
-      <div className="flex gap-6 flex-wrap h-[80vh] !overflow-y-scroll">
+      <div className="flex gap-6 w-full flex-wrap h-[80vh] !overflow-y-scroll">
         {data?.map((customer: OurHappyCustomersI) => (
           <OurHappyCustomresCard key={customer.id} {...customer} />
         ))}
