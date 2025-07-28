@@ -7,9 +7,10 @@ import React from "react";
 
 type Props = {
   headerTitle?: string;
+  url_route: string;
 };
 
-const FilterLayout = ({ headerTitle = "filterby" }: Props) => {
+const FilterLayout = ({ headerTitle = "filterby", url_route }: Props) => {
   const t = useTranslations();
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -42,13 +43,13 @@ const FilterLayout = ({ headerTitle = "filterby" }: Props) => {
   const handleCategory = (value: string) => {
     const params = new URLSearchParams(searchParams.toString());
     params.set("category", value);
-    router.push(`/our-happy-customers?${params.toString()}`);
+    router.push(`/${url_route}?${params.toString()}`);
   };
 
   const handleSubCategory = (value: string) => {
     const params = new URLSearchParams(searchParams.toString());
     params.set("subCategory", value);
-    router.push(`/our-happy-customers?${params.toString()}`);
+    router.push(`/${url_route}?${params.toString()}`);
   };
   return (
     <div className="xl:w-[274px] lg:w-[274px] md:w-[274px] sm:w-full xs:w-full py-6 p-4 rounded-lg bg-[#F5F5F5] dark:bg-black dark:border-[1px] dark:border-light-border">

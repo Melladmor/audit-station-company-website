@@ -1,7 +1,7 @@
 import CustomSection from "@/components/ui/CustomSection/CustomSection";
 import FilterLayout from "@/components/ui/FilterDropDown/FilterLayout";
 
-export default async function happyCustomersLayot({
+export default async function newsLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -11,7 +11,7 @@ export default async function happyCustomersLayot({
       <CustomSection className="py-[86px]">
         <div className="flex flex-col lg:flex-row gap-6">
           <div className="w-full lg:w-[274px] shrink-0">
-            <FilterLayout url_route="our-happy-customers" />
+            <FilterLayout url_route="blogs" />
           </div>
 
           <div className="flex-1 w-full">{children}</div>
