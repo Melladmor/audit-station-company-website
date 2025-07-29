@@ -27,7 +27,7 @@ const Header = async () => {
           id: 1,
           title: t("services.mainservices"),
           url: "services",
-          isPage: false,
+          isPage: true,
         },
         {
           id: 2,
@@ -88,15 +88,13 @@ const Header = async () => {
               <div className="lg:hidden">
                 <label
                   htmlFor="my-drawer"
-                  className="md:size-[30px] sm:size-[25px] text-white xs:size-[25px] bg-white rounded-sm flex justify-center items-center"
-                >
+                  className="md:size-[30px] sm:size-[25px] text-white xs:size-[25px] bg-white rounded-sm flex justify-center items-center">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     className="size-[15px] text-[#FF7701]"
                     fill="none"
                     viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
+                    stroke="currentColor">
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"

@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import PageSliderContainer from "../ui/Slider/PageSliderContainer";
 import { ImageSliderItemT } from "../ui/Slider/type";
+import { twMerge } from "tailwind-merge";
 
 type Props = {
   title: string;
@@ -17,6 +18,7 @@ type Props = {
   buttonLink: string;
   image?: string;
   slider?: ImageSliderItemT[];
+  titleClassName?: string;
 };
 
 const OurComponent = ({
@@ -28,6 +30,7 @@ const OurComponent = ({
   buttonLink,
   image,
   slider,
+  titleClassName,
 }: Props) => {
   const t = useTranslations();
   return (
@@ -46,7 +49,11 @@ const OurComponent = ({
           </div>
         )}
         <div className="flex flex-col gap-3">
-          <h1 className="xl:text-[36px] lg:text-[36px] md:text-[30px] sm:text-[28px] xs:text-[28px] text-center font-[700] text-light-text dark:text-dark-text">
+          <h1
+            className={twMerge(
+              titleClassName,
+              "xl:text-[36px] lg:text-[36px] md:text-[30px] sm:text-[28px] xs:text-[28px] text-center font-[700] text-light-text dark:text-dark-text"
+            )}>
             {title}
           </h1>
           {subTitle && (
@@ -60,8 +67,7 @@ const OurComponent = ({
           dangerouslySetInnerHTML={{
             __html: description,
           }}
-          className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text mt-8"
-        ></div>
+          className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text mt-8"></div>
 
         <div>
           <VideoPlayer

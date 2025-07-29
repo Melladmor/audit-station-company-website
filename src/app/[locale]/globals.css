@@ -83,8 +83,20 @@
   .links_active::after {
     @apply text-secondary;
   }
+  .card_services {
+    @apply rounded-[20px] rounded-tl-[65px] relative  bg-light-background dark:bg-dark-background  py-[40px] px-[20px] flex flex-col gap-4  items-center xl:h-[389px] lg:h-[389px] md:h-[325px] sm:h-[300px] xs:h-[300px] xl:w-[408px] lg:w-[408px] md:w-[315px] sm:w-full xs:w-full;
+  }
+  .card_modal_services_cut_out {
+    @apply relative h-full w-full   rounded-tl-[65px] px-[24px] pt-[24px] flex justify-end overflow-hidden;
+  }
+  .cutout_circle_services {
+    @apply absolute top-0 left-0 xl:w-[120px] xl:h-[120px] lg:w-[120px] lg:h-[120px] md:w-[85px] md:h-[85px] sm:w-[75px] sm:h-[75px] xs:w-[75px] xs:h-[75px]   rounded-full flex items-center justify-center;
+  }
   .card_modal {
     @apply bg-white rounded-[20px] rounded-tl-[65px] xs:pb-[24px]  xl:w-[500px] lg:w-[500px] md:w-[500px] sm:w-[400px] xs:w-full xl:h-[380px] lg:h-[380px] md:h-[380px] sm:h-auto xs:h-auto relative;
+  }
+  .image_circle_services {
+    @apply absolute top-1 left-1 xl:w-[110px] xl:h-[110px] lg:w-[110px] lg:h-[110px] md:w-[75px] md:h-[75px] sm:w-[65px] sm:h-[65px] xs:w-[65px] xs:h-[65px]  bg-white rounded-full z-40  flex justify-center items-center;
   }
   .card_modal_cutout_section {
     @apply relative xl:h-[133px] lg:h-[133px] md:h-[133px] sm:h-[113px] xs:h-[113px] w-full  rounded-tl-[65px] px-[24px] pt-[24px] flex justify-end overflow-hidden;

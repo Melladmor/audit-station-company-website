@@ -51,11 +51,11 @@ const NewsCard = ({
           {title}
         </h4>
         {description && (
-          <p
-            className="xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] xs:text-[12px]"
+          <div
+            className="xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] xs:text-[12px] text-light-text dark:text-dark-text"
             dangerouslySetInnerHTML={{
               __html: truncateHtmlToText(description, 84),
-            }}></p>
+            }}></div>
         )}
         <div className="flex gap-2 items-center justify-start">
           <p className="xl:text-[14px] lg:text-[14px] md:text-[14px] sm:text-[12px] xs:text-[12px] xl:h-[24px] lg:h-[24px] md:h-[24px] sm:h-[18px] xs:h-[18px] font-[600] text-secondary">

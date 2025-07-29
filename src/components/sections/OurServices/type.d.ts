@@ -26,3 +26,16 @@ export type ModalServiceDataT = {
   name: string;
   description: string;
 };
+
+export type ServiceItemT = {
+  id: number;
+  name: string;
+  parent_service_name: string;
+  parent_service_id: number;
+  sub_service_name: string;
+  sub_service_id: number;
+  image: string;
+  description: string;
+  details_description?: string;
+  video?: video;
+};
