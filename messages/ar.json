@@ -143,5 +143,9 @@
   "filterby": "فلترة حسب",
   "category": "الفئة",
   "subCategory": "الفئة الفرعية",
-  "loading": "انتظار..."
+  "loading": "انتظار...",
+  "newsdetailes": "تفاصيل الأخبار",
+  "minutesreading": "دقائق القراءة",
+  "author": "المؤلف",
+  "tags": "الوسوم"
 }

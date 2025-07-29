@@ -54,8 +54,6 @@ export function useFetchClient<T = any>({
         }
 
         const json = await res.json();
-        console.log({ json });
-        console.log("json", json?.meta);
 
         setMeta(json.meta);
         setData(json.data);

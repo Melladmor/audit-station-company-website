@@ -87,7 +87,7 @@ const NewsCard = ({
           </div>
           <div className="flex items-center justify-end w-full">
             <Link
-              href={`news/${id}`}
+              href={`news-details/${id}`}
               className="xl:w-[32px] xl:h-[32px] lg:w-[32px] lg:h-[32px] md:w-[28px] md:h-[28px] sm:w-[24px] sm:h-[24px] xs:w-[24px] xs:h-[24px] cursor-pointer flex items-center justify-center rounded-full bg-dark-background dark:bg-light-background">
               <FaArrowRight className="xl:size-4 lg:size-4 md:size-4 sm:size-3 xs:size-3 text-dark-text dark:text-light-text -rotate-45" />
             </Link>

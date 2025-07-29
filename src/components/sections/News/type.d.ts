@@ -25,4 +25,5 @@ export interface NewReturnI {
   date: string;
   image: string;
   created_at: string;
+  tags?: [];
 }

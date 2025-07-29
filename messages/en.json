@@ -143,5 +143,9 @@
   "filterby": "Filter By",
   "category": "Category",
   "subCategory": "Sub Category",
-  "loading": "Loading..."
+  "loading": "Loading...",
+  "newsdetailes": "News Details",
+  "minutesreading": "Minutes Reading",
+  "author": "Author",
+  "tags": "Tags"
 }
