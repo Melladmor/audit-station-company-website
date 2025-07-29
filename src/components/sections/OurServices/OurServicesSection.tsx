@@ -13,6 +13,8 @@ const OurServicesSection = async () => {
   const servicesData: MainServicesI[] = await fetchPublicData({
     url: "services/main-services",
   });
+  // const repeated = Array(5).fill(servicesData[0]?.our_services).flat();
+
   const ourServicesData: OurServicesI[] = [
     {
       id: 1,
@@ -48,13 +50,12 @@ const OurServicesSection = async () => {
         subTitle: t("subTitle"),
       }}
       className="mt-[100px]"
-      id="services"
-    >
+      id="services">
       <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-6 relative">
         {ourServicesData?.map((el: OurServicesI) => {
           return <OurServicesCard key={el?.id} data={el} />;
         })}
-        <div className="xl:w-[330px] xl:h-[330px] lg:w-[280px] lg:h-[280px] md:w-[160px] md:h-[160px] sm:w-[220px] sm:h-[220px] xs:w-[150px] xs:h-[150px] bg-[#F2FAEC] rounded-full p-[15px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
+        <div className="xl:w-[230px] xl:h-[230px] lg:w-[230px] lg:h-[230px] md:w-[160px] md:h-[160px] sm:w-[220px] sm:h-[220px] xs:w-[150px] xs:h-[150px] bg-[#F2FAEC] rounded-full p-[15px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
           <Image
             src="/logos/auditlogoblack.svg"
             alt="/logos/auditlogoblack.svg"
