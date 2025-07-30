@@ -8,17 +8,23 @@ import Image from "next/image";
 import PageSliderContainer from "../ui/Slider/PageSliderContainer";
 import { ImageSliderItemT } from "../ui/Slider/type";
 import { twMerge } from "tailwind-merge";
+import RewardsTable from "@/app/[locale]/rewards-program/components/RewardsTable";
+import { MembershipTierT } from "@/app/[locale]/type";
 
 type Props = {
   title: string;
   subTitle?: string;
   description: string;
-  video: string;
-  buttonTitle: string;
-  buttonLink: string;
+  video?: string;
+  buttonTitle?: string;
+  buttonLink?: string;
   image?: string;
   slider?: ImageSliderItemT[];
   titleClassName?: string;
+  rewards?: {
+    terms: string;
+    rewardsTable: MembershipTierT[];
+  };
 };
 
 const OurComponent = ({
@@ -31,6 +37,7 @@ const OurComponent = ({
   image,
   slider,
   titleClassName,
+  rewards,
 }: Props) => {
   const t = useTranslations();
   return (
@@ -53,7 +60,8 @@ const OurComponent = ({
             className={twMerge(
               titleClassName,
               "xl:text-[36px] lg:text-[36px] md:text-[30px] sm:text-[28px] xs:text-[28px] text-center font-[700] text-light-text dark:text-dark-text"
-            )}>
+            )}
+          >
             {title}
           </h1>
           {subTitle && (
@@ -67,22 +75,43 @@ const OurComponent = ({
           dangerouslySetInnerHTML={{
             __html: description,
           }}
-          className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text mt-8"></div>
+          className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text mt-8"
+        ></div>
+        {video && (
+          <div>
+            <VideoPlayer
+              videoLink={video}
+              customClass="!border-[#B3B6B8] !border-[1px] xl:!h-[472px] lg:!h-[472px]  md:!h-[400px] sm:!h-[350px] xs:!h-[350px]   !rounded-[16px] border"
+            />
+          </div>
+        )}
+        {rewards && (
+          <div className="rounded-[20px] border border-[#757575] p-6 flex flex-col gap-8 items-center">
+            <div className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-center xl:w-[85%] lg:w-[85%] md:w-full sm:w-full xs:w-full text-light-text dark:text-dark-text mt-8 font-medium">
+              {t("rewardsTableTitle")}
+            </div>
+            <RewardsTable data={rewards?.rewardsTable} />
+            <div className="bg-[#f6e2d0] px-4 py-6 rounded-lg">
+              <div
+                dangerouslySetInnerHTML={{
+                  __html: rewards?.terms,
+                }}
+                className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text mt-8"
+              ></div>
+            </div>
+          </div>
+        )}
 
-        <div>
-          <VideoPlayer
-            videoLink={video}
-            customClass="!border-[#B3B6B8] !border-[1px] xl:!h-[472px] lg:!h-[472px]  md:!h-[400px] sm:!h-[350px] xs:!h-[350px]   !rounded-[16px] border"
-          />
-        </div>
-        <div className="flex justify-end">
-          <Button
-            title={t(`${buttonTitle}`)}
-            isLink
-            path={buttonLink}
-            className="btn_size bg-secondary dark:bg-secondary hover:bg-black dark:hover:bg-white text-dark-text dark:text-dark-text dark:hover:text-black"
-          />
-        </div>
+        {buttonTitle && buttonLink && (
+          <div className="flex justify-end">
+            <Button
+              title={t(`${buttonTitle}`)}
+              isLink
+              path={buttonLink}
+              className="btn_size bg-secondary dark:bg-secondary hover:bg-black dark:hover:bg-white text-dark-text dark:text-dark-text dark:hover:text-black"
+            />
+          </div>
+        )}
       </div>
     </CustomSection>
   );

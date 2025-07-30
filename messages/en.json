@@ -148,5 +148,9 @@
   "minutesreading": "Minutes Reading",
   "author": "Author",
   "tags": "Tags",
-  "servicedetails": "Service Details"
+  "servicedetails": "Service Details",
+  "points_to_reach": "Points To Reach",
+  "point_value_data": "100 point value",
+  "tax_consultations": "TAX Consultation",
+  "rewardsTableTitle": "We created a reward program for all of our clients in order to show how much we appreciate them, here is the tiers of the rewards program and the benefits of each teir."
 }

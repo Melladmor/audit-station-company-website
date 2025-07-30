@@ -148,5 +148,9 @@
   "minutesreading": "دقائق القراءة",
   "author": "المؤلف",
   "tags": "الوسوم",
-  "servicedetails": "تفاصيل الخدمة"
+  "servicedetails": "تفاصيل الخدمة",
+  "points_to_reach": "النقاط المطلوبة",
+  "point_value_data": "قيمة 100 نقطة",
+  "tax_consultations": "استشارة ضريبية",
+  "rewardsTableTitle": "أنشأنا برنامج مكافآت لجميع عملائنا لنعبر عن مدى تقديرنا لهم. إليك مستويات البرنامج وفوائد كل مستوى."
 }

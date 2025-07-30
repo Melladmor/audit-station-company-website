@@ -18,4 +18,18 @@ export type OurTrainingProgramsT = {
   title_discover: string;
   description_discover: string;
   image: string;
-}
+};
+
+type RewardProgramT = {
+  title: string;
+  description: string;
+  terms: string;
+};
+type MembershipTierT = {
+  id: number;
+  name: string;
+  points_to_reach: string;
+  point_value_data: string;
+  tax_consultations: string;
+  image: string;
+};
