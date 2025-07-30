@@ -6,6 +6,7 @@ import CustomSection from "@/components/ui/CustomSection/CustomSection";
 import Image from "next/image";
 import Button from "@/components/ui/Buttons/Button";
 import fetchPublicData from "@/lib/api/fetchPublicData";
+import { randomUUID } from "crypto";
 
 const OurServicesSection = async () => {
   const t = await getTranslations("sections.ourservices");
@@ -13,7 +14,6 @@ const OurServicesSection = async () => {
   const servicesData: MainServicesI[] = await fetchPublicData({
     url: "services/main-services",
   });
-  // const repeated = Array(5).fill(servicesData[0]?.our_services).flat();
 
   const ourServicesData: OurServicesI[] = [
     {
@@ -32,8 +32,8 @@ const OurServicesSection = async () => {
       id: 3,
       title: servicesData[2]?.name,
       subServices: servicesData[2]?.our_services,
-      className: "xs:mt-[60px]",
       bg: "#825698",
+      className: "xl:mt-0 lg:mt-0 md:mt-0 sm:mt-[65px] xs:mt-[65px]",
     },
     {
       id: 4,
@@ -50,12 +50,13 @@ const OurServicesSection = async () => {
         subTitle: t("subTitle"),
       }}
       className="mt-[100px]"
-      id="services">
+      id="services"
+    >
       <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-6 relative">
         {ourServicesData?.map((el: OurServicesI) => {
           return <OurServicesCard key={el?.id} data={el} />;
         })}
-        <div className="xl:w-[230px] xl:h-[230px] lg:w-[230px] lg:h-[230px] md:w-[160px] md:h-[160px] sm:w-[220px] sm:h-[220px] xs:w-[150px] xs:h-[150px] bg-[#F2FAEC] rounded-full p-[15px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
+        <div className="xl:w-[160px] xl:h-[160px] lg:w-[160px] lg:h-[160px] md:w-[130px] md:h-[130px] sm:w-[130px] sm:h-[130px] xs:w-[150px] xs:h-[150px] bg-[#F2FAEC] rounded-full p-[15px] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center">
           <Image
             src="/logos/auditlogoblack.svg"
             alt="/logos/auditlogoblack.svg"

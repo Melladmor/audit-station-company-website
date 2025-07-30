@@ -19,7 +19,8 @@ const ServiceCards = async ({ data }: Props) => {
     inset 0 -4px 4px -2px rgba(204, 208, 218, 0.38),
     inset -4px 0 4px -2px rgba(204, 208, 218, 0.38)
   `,
-      }}>
+      }}
+    >
       <div
         className="cutout_circle_services"
         style={{
@@ -27,7 +28,8 @@ const ServiceCards = async ({ data }: Props) => {
     inset -4px 0 4px -2px rgba(204, 208, 218, 0.38),
     inset 0 -4px 4px -2px rgba(204, 208, 218, 0.38)
   `,
-        }}></div>
+        }}
+      ></div>
 
       <Image
         loading="lazy"
@@ -37,22 +39,21 @@ const ServiceCards = async ({ data }: Props) => {
         width={100}
         height={100}
       />
-      <h2 className="xl:text-[20px] lg:text-[20px] md:text-[18px] sm:text-[16px] xs:text-[16px] text-light-text dark:text-dark-text font-medium capitalize">
-        {data?.parent_service_name}
-      </h2>
-      <h3 className="xl:text-[18px] lg:text-[18px] md:text-[16px] sm:text-[14px] xs:text-[14px]  text-[#f6e2d0] capitalize">
-        {data?.sub_service_name}
-      </h3>
-
-      <h4 className="xl:text-[20px] lg:text-[20px] md:text-[18px] sm:text-[16px] xs:text-[16px] text-secondary font-medium capitalize">
-        {data?.name}
-      </h4>
+      <div>
+        <h2 className="xl:text-[20px] lg:text-[20px] md:text-[18px] sm:text-[16px] xs:text-[16px] !text-start text-secondary font-medium capitalize">
+          {data?.name}{" "}
+        </h2>
+        <h3 className="xl:text-[14px] lg:text-[14px] md:text-[14px] sm:text-[12px] xs:text-[12px] !text-start text-[#636363] capitalize">
+          {data?.parent_service_name}
+        </h3>
+      </div>
 
       <div
-        className="xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] xs:text-[12px] xl:w-[300px] lg:w-[300px] md:w-full sm:w-full xs:w-full text-center text-light-text dark:text-dark-text"
+        className="mt-6 xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[12px] xs:text-[12px] xl:w-[300px] lg:w-[300px] md:w-full sm:w-full xs:w-full text-center text-light-text dark:text-dark-text"
         dangerouslySetInnerHTML={{
-          __html: truncateHtmlToText(data?.description, 150),
-        }}></div>
+          __html: truncateHtmlToText(data?.description, 200),
+        }}
+      ></div>
 
       <Button
         isLink
