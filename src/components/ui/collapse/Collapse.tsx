@@ -3,11 +3,13 @@ import { useState, useRef, useEffect } from "react";
 import { IoIosArrowDown } from "react-icons/io";
 import { twMerge } from "tailwind-merge";
 import ComparePackages from "../../sections/Packages/ComparePackages/ComparePackages";
+import { useTranslations } from "next-intl";
 type Props = {
   btnClassName?: string;
   title: string;
 };
 export default function Collapse({ btnClassName, title }: Props) {
+  const t = useTranslations();
   const [isOpen, setIsOpen] = useState(false);
   const collapseRef = useRef<HTMLDivElement>(null);
   const baseStyles = `py-[10px] px-[20px] rounded-[8px] bg-dark-background 
@@ -33,7 +35,8 @@ export default function Collapse({ btnClassName, title }: Props) {
         <div className="flex justify-center items-center">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={twMerge(baseStyles, btnClassName)}>
+            className={twMerge(baseStyles, btnClassName)}
+          >
             <p className="font-[700] text-[16px]">{title}</p>
 
             <IoIosArrowDown
@@ -49,21 +52,31 @@ export default function Collapse({ btnClassName, title }: Props) {
       {/* Collapsible Content */}
       {isOpen && (
         <div
-          className={`w-full overflow-x-scroll rounded-[20px] px-[24px] py-[48px] border border-[#757575]  transition-all duration-300 ${
+          className={`rounded-[20px] px-[24px] py-[48px] border border-[#757575] transition-all duration-300 ${
             isOpen
               ? "opacity-100 scale-100 visible"
               : "opacity-0 scale-95 invisible"
-          }`}>
-          <div className="w-[5000px]">
-            <ComparePackages />
+          }`}
+        >
+          <div className="flex flex-col items-center gap-[39px] mb-[39px]">
+            <h1 className="text-[24px] font-[700]  text-light-text dark:text-dark-text">
+              {t("comparepackages")}
+            </h1>
+
+            <p className="text-[20px] text-center text-light-text dark:text-dark-text">
+              {t("comparepackagessub")}
+            </p>
           </div>
+          <ComparePackages />
         </div>
       )}
+
       {isOpen && (
         <div className="flex justify-center items-center mt-[32px]">
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className={twMerge(baseStyles, btnClassName)}>
+            className={twMerge(baseStyles, btnClassName)}
+          >
             <p className="font-[700] text-[16px]">{title}</p>
 
             <IoIosArrowDown
