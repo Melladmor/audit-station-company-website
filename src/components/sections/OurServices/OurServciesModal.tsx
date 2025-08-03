@@ -2,10 +2,10 @@
 import React, { useEffect } from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import Image from "next/image";
-import CtaButton from "@/components/ui/Buttons/CtaButton";
 import { useTranslations } from "next-intl";
 import { useFetchClient } from "@/hooks/useFetchClient";
 import Button from "@/components/ui/Buttons/Button";
+import { ModalServiceDataT } from "./type";
 
 interface ModalProps {
   id: number | null;
@@ -15,11 +15,7 @@ interface ModalProps {
 const OurServciesModal: React.FC<ModalProps> = ({ id, onClose }) => {
   const t = useTranslations();
 
-  const {
-    data: returnedData,
-    error,
-    loading,
-  } = useFetchClient({
+  const { data } = useFetchClient<ModalServiceDataT>({
     url: id ? `services/${id} ` : "",
   });
 
@@ -36,8 +32,7 @@ const OurServciesModal: React.FC<ModalProps> = ({ id, onClose }) => {
   return (
     <div
       id="modal-overlay"
-      className="fixed inset-0 xs:px-[15px] bg-black bg-opacity-50 flex items-center justify-center z-50"
-    >
+      className="fixed inset-0 xs:px-[15px] bg-black bg-opacity-50 flex items-center justify-center z-50">
       <div className="card_modal bg-white dark:bg-black">
         <div className="card_modal_cutout_section">
           <div className="cutout-circle"></div>
@@ -58,21 +53,20 @@ const OurServciesModal: React.FC<ModalProps> = ({ id, onClose }) => {
             height={100}
           />
         </div>
-        {!returnedData ? (
+        {!data ? (
           <div className="h-[150px] w-full flex justify-center items-center">
             <span className="loading loading-ring loading-lg text-secondary"></span>
           </div>
         ) : (
           <div className="xl:px-[56px] lg:px-[56px] md:px-[56px] sm:px-[25px] xs:px-[25px] flex flex-col justify-center items-center xl:gap-6 lg:gap-6 md:gap-6 sm:gap-4 xs:gap-4">
             <h2 className="text-[20px] text-light-text dark:text-dark-text font-bold">
-              {returnedData?.name}
+              {data?.name}
             </h2>
             <p
               className="text-light-text dark:text-dark-text text-[16px] w-full text-center"
               dangerouslySetInnerHTML={{
-                __html: `${returnedData?.description}`,
-              }}
-            ></p>
+                __html: `${data?.description}`,
+              }}></p>
             <Button
               isLink
               not_blank

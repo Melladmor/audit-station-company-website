@@ -2,8 +2,6 @@
 
 import { useSearchParams } from "next/navigation";
 import { useFetchClient } from "@/hooks/useFetchClient";
-import OurHappyCustomresCard from "@/components/sections/OurHappyCustomer/OurHappyCustomresCard";
-import { OurHappyCustomersI } from "@/components/sections/OurHappyCustomer/type";
 import MainPageLoading from "@/components/ui/Loading/MainPageLoading";
 import Pagination from "@/components/ui/Pagination/Pagination";
 import NewsCard from "@/components/sections/News/NewsCard";
@@ -23,7 +21,7 @@ export default function NewList({
   const subCategory = searchParams.get("subCategory") || initialSub;
   const page = parseInt(searchParams.get("page") || "1", 10);
 
-  const { data, loading, meta } = useFetchClient({
+  const { data, loading, meta } = useFetchClient<NewReturnI[]>({
     url: `blogs?mainCategory=${category}&subCategory=${subCategory}&page=${page}`,
   });
 

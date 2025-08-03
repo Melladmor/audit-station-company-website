@@ -1,7 +1,7 @@
 import fetchPublicData from "@/lib/api/fetchPublicData";
 import { getTranslations } from "next-intl/server";
 import React from "react";
-import { OurTrainingProgramsT, PlatformT } from "../type";
+import { OurTrainingProgramsT } from "../type";
 import TopPagesSection from "@/components/ui/TopPagesSection";
 import OurComponent from "@/components/OurComponent/OurComponent";
 import { ImageSliderItemT } from "@/components/ui/Slider/type";

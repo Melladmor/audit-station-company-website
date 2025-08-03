@@ -3,7 +3,6 @@ import { StatisticsI } from "./type.d";
 import StatisticsCard from "./StatisticsCard";
 import fetchPublicData from "@/lib/api/fetchPublicData";
 import { getLocale, getTranslations } from "next-intl/server";
-import { useLocale } from "next-intl";
 type StatsData = {
   number_in_world: number;
   years_of_experience: number;

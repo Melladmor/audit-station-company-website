@@ -1,24 +1,18 @@
 "use client";
 import React from "react";
 import { OurHappyCustomersI } from "./type";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import Link from "next/link";
 import CustomImage from "@/components/ui/CustomImage";
 import { truncateHtmlToText } from "@/lib/helper/helper";
 import Tooltip from "@/components/ui/Tooltip/Tooltip";
-import { useLocale } from "next-intl";
 type Props = OurHappyCustomersI;
 
 function OurHappyCustomresCard({
-  id,
   category,
   description,
   logo,
   name,
   subCategory,
-  website_link,
 }: Props) {
-  const locale = useLocale();
   return (
     <div className="xl:w-[411px]  lg:w-[411px]  md:w-[300px] sm:w-full xs:w-full xl:h-[357px] lg:h-[357px] md:h-auto sm:h-auto  xs:h-auto xl:p-[24px] lg:p-[24px] md:p-[20px] sm:p-[16px] xs:p-[16px] rounded-[20px] bg-light-card dark:bg-dark-card dark:border-dark-border border-[1px]   flex flex-col items-center gap-[16px]">
       <div className="flex items-center justify-center w-full">
@@ -45,8 +39,7 @@ function OurHappyCustomresCard({
           dangerouslySetInnerHTML={{
             __html: truncateHtmlToText(description, 70),
           }}
-          className="text-light-text dark:text-dark-text xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[14px] xs:text-[14px] text-center max-w-[300px]"
-        ></div>
+          className="text-light-text dark:text-dark-text xl:text-[16px] lg:text-[16px] md:text-[14px] sm:text-[14px] xs:text-[14px] text-center max-w-[300px]"></div>
       </Tooltip>
       {/* <div className="flex items-center justify-end w-full">
         <Link

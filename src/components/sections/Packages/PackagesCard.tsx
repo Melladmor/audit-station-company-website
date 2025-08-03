@@ -12,7 +12,6 @@ const PackagesCard = ({
   features,
   name,
   price,
-  color,
 }: Props) => {
   const t = useTranslations();
 

@@ -5,7 +5,7 @@ import { InputPropsI } from "../type";
 import { useTranslations } from "next-intl";
 
 interface SelectInputProps extends InputPropsI {
-  options: { label: string; value: string }[];
+  options: { label: string; value: string | number }[];
   defaultValue?: string;
   optionalLabel?: string;
   onChangeFilter?: (value: string) => void;
@@ -17,12 +17,10 @@ const SelectInput: React.FC<SelectInputProps> = ({
   name,
   error,
   options,
-  defaultValue = "",
   optionalLabel = "",
   required = false,
   disabled = false,
   className = "",
-  icon,
   onChangeFilter,
   register,
   loading = false,
@@ -58,8 +56,7 @@ const SelectInput: React.FC<SelectInputProps> = ({
             error ? "border-red-500 ring-red-300" : ""
           } `}
           onChange={handleChange}
-          {...register}
-        >
+          {...register}>
           <option disabled value="">
             {placeholderLabel}
           </option>

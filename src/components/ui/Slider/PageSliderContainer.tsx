@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import Slider from "@/components/ui/Slider/Slider";
 import { ImageSliderItemT } from "./type";
 import PageSliderCard from "./PageSliderCard";
 import PagesSlider from "./PagesSlider";

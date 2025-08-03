@@ -21,7 +21,7 @@ export default function HappyCustomersList({
   const subCategory = searchParams.get("subCategory") || initialSub;
   const page = parseInt(searchParams.get("page") || "1", 10);
 
-  const { data, loading, meta } = useFetchClient({
+  const { data, loading, meta } = useFetchClient<OurHappyCustomersI[]>({
     url: `happy-customer?mainCategory=${category}&subCategory=${subCategory}&page=${page}`,
   });
 

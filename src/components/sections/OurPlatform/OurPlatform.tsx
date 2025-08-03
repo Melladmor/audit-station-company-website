@@ -2,11 +2,9 @@ import CustomSection from "@/components/ui/CustomSection/CustomSection";
 import { getTranslations } from "next-intl/server";
 import React from "react";
 import OurPlatformHead from "./OurPlatformHead";
-import { OurPlatformI } from "./type";
 import OurPlatformVideo from "./OurPlatformVideo";
 import Button from "@/components/ui/Buttons/Button";
 import fetchPublicData from "@/lib/api/fetchPublicData";
-// import fetchPublicData from "@/lib/api/fetchPublicData";
 
 const OurPlatform = async () => {
   const t = await getTranslations("sections.ourplatform");

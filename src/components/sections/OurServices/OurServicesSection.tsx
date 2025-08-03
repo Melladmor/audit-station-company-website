@@ -6,7 +6,6 @@ import CustomSection from "@/components/ui/CustomSection/CustomSection";
 import Image from "next/image";
 import Button from "@/components/ui/Buttons/Button";
 import fetchPublicData from "@/lib/api/fetchPublicData";
-import { randomUUID } from "crypto";
 
 const OurServicesSection = async () => {
   const t = await getTranslations("sections.ourservices");

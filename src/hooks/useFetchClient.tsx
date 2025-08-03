@@ -5,12 +5,20 @@ interface UseFetchParams {
   url: string;
   slug?: string;
 }
+
 export interface PaginationMeta {
   current_page: number;
   from: number;
   last_page: number;
   total: number;
 }
+
+interface ApiResponse<T> {
+  data: T;
+  message?: string;
+  meta?: PaginationMeta;
+}
+
 interface UseFetchResult<T> {
   data: T | null;
   loading: boolean;
@@ -20,18 +28,18 @@ interface UseFetchResult<T> {
 
 const API_BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL;
 
-export function useFetchClient<T = any>({
+export function useFetchClient<T = unknown>({
   url,
   slug = "public",
 }: UseFetchParams): UseFetchResult<T> {
   const [data, setData] = useState<T | null>(null);
   const [meta, setMeta] = useState<PaginationMeta | null>(null);
-  const [loading, setLoading] = useState(!!url);
+  const [loading, setLoading] = useState<boolean>(!!url);
   const [error, setError] = useState<Error | null>(null);
   const locale = useLocale();
 
   useEffect(() => {
-    if (!url || url === "") return;
+    if (!url) return;
 
     const controller = new AbortController();
 
@@ -53,12 +61,12 @@ export function useFetchClient<T = any>({
           throw new Error(`Failed to fetch from ${url}: ${res.status}`);
         }
 
-        const json = await res.json();
+        const result: ApiResponse<T> = await res.json();
 
-        setMeta(json.meta);
-        setData(json.data);
-      } catch (err: any) {
-        if (err.name !== "AbortError") {
+        setData(result.data ?? null);
+        setMeta(result.meta ?? null);
+      } catch (err: unknown) {
+        if (err instanceof Error && err.name !== "AbortError") {
           setError(err);
         }
       } finally {
@@ -67,9 +75,8 @@ export function useFetchClient<T = any>({
     };
 
     fetchData();
-
     return () => controller.abort();
-  }, [url, locale]);
+  }, [url, locale, slug]);
 
   return { data, loading, error, meta };
 }

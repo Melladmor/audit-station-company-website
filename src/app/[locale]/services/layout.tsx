@@ -1,9 +1,7 @@
 import {
   MainServicesI,
-  OurServicesI,
 } from "@/components/sections/OurServices/type";
 import CustomSection from "@/components/ui/CustomSection/CustomSection";
-import FilterLayout from "@/components/ui/FilterDropDown/FilterLayout";
 import FilterTabs from "@/components/ui/FilterTabs/FilterTabs";
 import { TabsFilterT } from "@/components/ui/FilterTabs/type";
 import TopPagesSection from "@/components/ui/TopPagesSection";

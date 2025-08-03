@@ -3,41 +3,7 @@
 import React from "react";
 import { MembershipTierT } from "../../type";
 import { useTranslations } from "next-intl";
-
-const tiers: MembershipTierT[] = [
-  {
-    id: 21,
-    name: "Bronze",
-    points_to_reach: "0",
-    point_value_data: "0.25 AED",
-    tax_consultations: "NA",
-    image: "https://api-dr.taxstation.ae/storage/bronze.jpg",
-  },
-  {
-    id: 22,
-    name: "Silver",
-    points_to_reach: "30,000",
-    point_value_data: "0.5 AED",
-    tax_consultations: "1/12 Months",
-    image: "https://api-dr.taxstation.ae/storage/silver.jpg",
-  },
-  {
-    id: 23,
-    name: "Gold",
-    points_to_reach: "90,000",
-    point_value_data: "0.75 AED",
-    tax_consultations: "1/6 Months",
-    image: "https://api-dr.taxstation.ae/storage/gold.jpg",
-  },
-  {
-    id: 24,
-    name: "Black",
-    points_to_reach: "200,000",
-    point_value_data: "1 AED",
-    tax_consultations: "1/3 Months",
-    image: "https://api-dr.taxstation.ae/storage/black.jpg",
-  },
-];
+import Image from "next/image";
 
 type Props = {
   data: MembershipTierT[];
@@ -58,12 +24,13 @@ export default function RewardsTable({ data }: Props) {
             {data.map((tier: MembershipTierT) => (
               <th
                 key={tier.id}
-                className="p-4 font-semibold text-gray-700 border-b"
-              >
+                className="p-4 font-semibold text-gray-700 border-b">
                 <div className="flex flex-col items-center gap-2">
-                  <img
+                  <Image
                     src={tier.image}
                     alt={tier.name}
+                    width={100}
+                    height={100}
                     className="w-20 h-14 object-cover rounded-md"
                   />
                   <span className="uppercase font-bold">{tier.name}</span>
