@@ -27,3 +27,46 @@ export const isVideoLink = (url: string): boolean => {
   // If no match, return false
   return false;
 };
+// utils/getEmbeddedUrl.ts
+
+export const getEmbeddedUrl = (url: string): string => {
+  try {
+    const parsed = new URL(url);
+
+    // YouTube
+    if (
+      parsed.hostname.includes("youtube.com") &&
+      parsed.searchParams.has("v")
+    ) {
+      const videoId = parsed.searchParams.get("v");
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+
+    if (parsed.hostname.includes("youtu.be")) {
+      const videoId = parsed.pathname.slice(1); // remove leading slash
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+
+    // TikTok
+    if (parsed.hostname.includes("tiktok.com")) {
+      return url.replace("/video/", "/embed/").split("?")[0];
+    }
+
+    // Instagram (only works if embed is allowed)
+    if (parsed.hostname.includes("instagram.com")) {
+      return `${url}embed`;
+    }
+
+    // Facebook (basic attempt – may require App access for real use)
+    if (parsed.hostname.includes("facebook.com")) {
+      return `https://www.facebook.com/plugins/video.php?href=${encodeURIComponent(
+        url
+      )}`;
+    }
+
+    // LinkedIn, Netflix, etc. — no public embed support
+    return "";
+  } catch {
+    return "";
+  }
+};

@@ -15,7 +15,6 @@ const TopPagesSection = async (props: Props) => {
           src="/images/topsection.jpg"
           alt="/images/topsection.jpg"
           fill
-          // className="object-contain object-center"
           priority
         />
       </div>
@@ -26,9 +25,6 @@ const TopPagesSection = async (props: Props) => {
           <h1 className="xl:text-[64px] lg:text-[64px] md:text-[64px] sm:text-[45px] xs:text-[30px] font-[700] capitalize text-white">
             {props.title}
           </h1>
-          <p className="text-secondary capitalize text-[16px] font-[700] absolute right-[-20px] bottom-[-20px]">
-            {t("auditstationcompany")}
-          </p>
         </div>
       </div>
     </div>

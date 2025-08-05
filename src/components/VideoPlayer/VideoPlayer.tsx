@@ -6,7 +6,7 @@ import Controls from "./Controls/Controls";
 import useNextBack from "./hooks/useNextBack";
 import "./css/player.css";
 import { twMerge } from "tailwind-merge";
-import { isVideoLink } from "./utils/IsVideoLink";
+import { getEmbeddedUrl, isVideoLink } from "./utils/IsVideoLink";
 type Props = {
   videoLink: string;
   customClass?: string;
@@ -42,7 +42,7 @@ const VideoPlayer = ({ videoLink, customClass }: Props) => {
           <iframe
             width="100%"
             height="100%"
-            src="https://www.youtube.com/embed/K6--6aeQz48?si=1dECc3kznO6Uif3F"
+            src={getEmbeddedUrl(videoLink)}
             title="YouTube video player"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowFullScreen

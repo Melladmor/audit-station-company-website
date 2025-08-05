@@ -31,9 +31,10 @@ const RewardCard = ({
   return (
     <div
       className={twMerge(
-        "bg-light-background dark:bg-dark-background xl:min-w-[302px] lg:min-w-[302px] md:min-w-[302px] sm:min-w-full xs:min-w-full shadow-light border-b-[3px] border-secondary",
+        "bg-light-background dark:bg-dark-background xl:min-w-[302px] lg:min-w-[302px] md:min-w-[302px] sm:min-w-full xs:min-w-full  border-b-[3px] border-secondary",
         className
-      )}>
+      )}
+    >
       <Image
         src={image}
         alt=""
@@ -53,7 +54,8 @@ const RewardCard = ({
           )}
           dangerouslySetInnerHTML={{
             __html: truncateHtmlToText(subTitle, 150),
-          }}></div>
+          }}
+        ></div>
         {description && (
           <div
             className={twMerge(
@@ -62,7 +64,8 @@ const RewardCard = ({
             )}
             dangerouslySetInnerHTML={{
               __html: truncateHtmlToText(description, 150),
-            }}></div>
+            }}
+          ></div>
         )}
         {links && links.length > 0 && (
           <div className="flex items-center gap-3 mt-[16px]">
