@@ -513,7 +513,11 @@ export default function PackagesCompare() {
 
     { packageId: "smart", featureId: "sw_software_advice", value: true },
     { packageId: "smart", featureId: "sw_choosing_software", value: true },
-    { packageId: "smart", featureId: "sw_users", value: "4 Users" },
+    {
+      packageId: "smart",
+      featureId: "sw_users",
+      value: t("packageFeatures.smart.sw_users"),
+    },
     { packageId: "smart", featureId: "sw_technical_support", value: true },
     {
       packageId: "smart",
@@ -625,7 +629,11 @@ export default function PackagesCompare() {
       featureId: "sw_choosing_software",
       value: true,
     },
-    { packageId: "professional", featureId: "sw_users", value: "7 Users" },
+    {
+      packageId: "professional",
+      featureId: "sw_users",
+      value: t("packageFeatures.professional.sw_users"),
+    },
     {
       packageId: "professional",
       featureId: "sw_technical_support",
@@ -777,7 +785,11 @@ export default function PackagesCompare() {
 
     { packageId: "ultimate", featureId: "sw_software_advice", value: true },
     { packageId: "ultimate", featureId: "sw_choosing_software", value: true },
-    { packageId: "ultimate", featureId: "sw_users", value: "10 Users" },
+    {
+      packageId: "ultimate",
+      featureId: "sw_users",
+      value: t("packageFeatures.ultimate.sw_users"),
+    },
     { packageId: "ultimate", featureId: "sw_technical_support", value: true },
     {
       packageId: "ultimate",

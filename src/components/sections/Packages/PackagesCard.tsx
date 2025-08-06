@@ -25,7 +25,7 @@ const PackagesCard = ({ id, description, features, name, price }: Props) => {
           </p>
         </div>
         <Button
-          className="!bg-[#128c6b] w-full font-[400]   rounded-[25px] text-white"
+          className="!bg-[#128c6b] w-full font-[400]   rounded-[25px] text-white dark:text-white"
           title={t("contactus")}
           isLink
           path="https://wa.me/971586028902"
