@@ -4,6 +4,19 @@
 * {
   scroll-behavior: smooth;
 }
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #0a0a0a;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background: white;
+  }
+}
+
 .theme-switch {
   position: relative;
   background-image: url("/images/switch.png");

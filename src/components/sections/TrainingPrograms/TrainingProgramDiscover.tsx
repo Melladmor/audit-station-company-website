@@ -26,7 +26,8 @@ const TrainingProgramDiscover = async ({
           className="text-light-text dark:text-dark-text xl:text-[20px] lg:text-[20px] md:text-[14px] sm:text-[14px] xs:text-[12px]"
           dangerouslySetInnerHTML={{
             __html: truncateHtmlToText(discription, 150),
-          }}></div>
+          }}
+        ></div>
         <Button
           title={t("discovermore")}
           isLink
@@ -38,7 +39,10 @@ const TrainingProgramDiscover = async ({
       <div className="h-full w-full relative">
         <div className="w-[90%] h-[90%] bg-[#FFEBD9] absolute ltr:right-0 rtl:left-0 bottom-0 xl:block lg:block md:block sm:hidden xs:hidden"></div>
         <div className=" xl:absolute lg:absolute md:absolute top-0 ltr:left-0 rtl:right-0 xl:w-[90%] lg:w-[90%] md:w-[90%] sm:w-full xs:w-full xl:h-[90%] lg:h-[90%] md:h-[90%] sm:h-full xs:h-full shadow-light">
-          <VideoPlayer videoLink={videoLink} />
+          <VideoPlayer
+            videoLink={videoLink}
+            customClass="!border-[#B3B6B8] !border-[1px]"
+          />
         </div>
       </div>
     </div>
