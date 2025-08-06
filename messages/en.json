@@ -214,7 +214,131 @@
       }
     }
   },
+  "packcompare": {
+    "basic": {
+      "name": "Basic",
+      "price": "AED 999 / Month"
+    },
+    "starter": {
+      "name": "Starter",
+      "price": "AED 2749 / Month"
+    },
+    "smart": {
+      "name": "Smart",
+      "price": "AED 4199 / Month"
+    },
+    "professional": {
+      "name": "Professional",
+      "price": "AED 5899 / Month"
+    },
+    "ultimate": {
+      "name": "Ultimate",
+      "price": "AED 14999 / Month"
+    }
+  },
+  "featureCategories": {
+    "bookkeeping": "BOOKKEEPING",
+    "internal_auditing": "INTERNAL AUDITING",
+    "software": "SOFTWARE",
+    "cfo": "CFO",
+    "tax": "TAX",
+    "additional_privileges": "ADDITIONAL PRIVILEGES"
+  },
+  "featuresPack": {
+    "1": "BOOKKEEPING",
+    "bk_transactions": "Transactions",
+    "bk_accountant": "Accountant",
+    "bk_depreciation_calculation": "Depreciation Calculation",
+    "bk_bank_reconciliation": "Bank Reconciliation",
+    "bk_cst_supplier": "Cst & Supplier",
+    "bk_reconciliation": "Reconciliation",
 
+    "2": "INTERNAL AUDITING",
+    "ia_stocktaking": "Stocktaking",
+    "ia_stock_analysis": "Stock Analysis",
+    "ia_fixing_accounts": "Fixing Accounts",
+    "ia_role_distribution": "Role Distribution",
+    "ia_accountant_testing": "Accountant Testing",
+    "ia_risk_management": "Risk Management",
+    "ia_assets_reevaluation": "Assets Reevaluation",
+    "ia_cost_control": "Cost Control",
+
+    "3": "SOFTWARE",
+    "sw_software_advice": "Software Advice",
+    "sw_choosing_software": "Choosing Software",
+    "sw_users": "Users",
+    "sw_technical_support": "Technical Support",
+    "sw_fixing_charts_of_accounts": "Fixing Charts Of Accounts",
+    "sw_digital_auditing": "Digital Auditing",
+    "sw_privilege_assignment": "Privilege Assignment",
+
+    "cfo_financial_manager": "Financial Manager",
+    "cfo_pnl_reports": "P&L Reports",
+    "cfo_balance_sheet": "Balance Sheet",
+    "cfo_cash_flow_statements": "Cash Flow Statments",
+    "cfo_accountant_support": "Accountant Support",
+    "cfo_internal_control": "Internal Control",
+    "cfo_onsite_visits": "Onsite Visits",
+    "cfo_decision_making_help": "Decision Making Help",
+    "cfo_overseeing_accountants": "Overseeing Accountants",
+    "cfo_on_demand_reports": "On Demand Reports",
+
+    "4": "TAX",
+    "tax_vat_registration": "VAT Registration",
+    "tax_vat_advice": "VAT Advice",
+    "tax_vat_return_filing": "VAT Return Filing",
+    "tax_corporate_tax_registration": "Corporate TAX Registration",
+    "tax_corporate_tax_advice": "Corporate TAX Advice",
+    "tax_audited_statements": "Audited Statements",
+    "tax_aml_compliance": "AML Compliance",
+
+    "5": "ADDITIONAL PRIVILEGES",
+    "ap_accountant_hiring": "Accountant Hiring",
+    "ap_business_review_meeting": "Business Review Meeting",
+    "ap_ceo_meeting": "CEO Meeting"
+  },
+  "packageFeatures": {
+    "basic": {
+      "bk_transactions": "50 Transactions",
+      "sw_users": "No Users"
+    },
+    "starter": {
+      "bk_transactions": "200 Transactions",
+      "bk_accountant": "Shared Accountant",
+      "sw_users": "2 Users"
+    },
+    "smart": {
+      "bk_transactions": "1000 Transactions",
+      "ia_stocktaking": "1/Year* Stocktaking",
+      "sw_users": "4 Users",
+      "cfo_financial_manager": "Shared Financial Manager",
+      "cfo_onsite_visits": "1 Onsite Visits",
+      "ap_business_review_meeting": "1 Business Review Meeting",
+      "ap_ceo_meeting": "1*30Mins CEO Meeting"
+    },
+    "professional": {
+      "bk_transactions": "1200 Transactions",
+      "bk_accountant": "Shared Accountant",
+      "ia_stocktaking": "2/Year* Stocktaking",
+      "sw_users": "7 Users",
+      "cfo_financial_manager": "Shared Financial Manager",
+      "cfo_onsite_visits": "2 Onsite Visits",
+      "ap_accountant_hiring": "3 Accountant Hiring",
+      "ap_business_review_meeting": "2 Business Review Meeting",
+      "ap_ceo_meeting": "2*30Mins CEO Meeting"
+    },
+    "ultimate": {
+      "bk_transactions": "Unlimited Transactions",
+      "bk_accountant": "Dedicated Accountant",
+      "ia_stocktaking": "4/Year* Or 1/Year** Stocktaking",
+      "sw_users": "10 Users",
+      "cfo_financial_manager": "Dedicaed Financial Manager",
+      "cfo_onsite_visits": "4 Onsite Visits",
+      "ap_accountant_hiring": "5 Accountant Hiring",
+      "ap_business_review_meeting": "4 Business Review Meeting",
+      "ap_ceo_meeting": "4*30Mins CEO Meeting"
+    }
+  },
   "seemore": "See More",
   "readmore": "Read More",
   "readdetails": "Read Details",

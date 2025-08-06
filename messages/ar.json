@@ -214,6 +214,131 @@
       }
     }
   },
+  "packcompare": {
+    "basic": {
+      "name": "الأساسي",
+      "price": "999 درهم / شهرياً"
+    },
+    "starter": {
+      "name": "المبتدئ",
+      "price": "2749 درهم / شهرياً"
+    },
+    "smart": {
+      "name": "الذكي",
+      "price": "4199 درهم / شهرياً"
+    },
+    "professional": {
+      "name": "الاحترافي",
+      "price": "5899 درهم / شهرياً"
+    },
+    "ultimate": {
+      "name": "الأقصى",
+      "price": "14999 درهم / شهرياً"
+    }
+  },
+  "featureCategories": {
+    "bookkeeping": "مسك الدفاتر",
+    "internal_auditing": "المراجعة الداخلية",
+    "software": "البرمجيات",
+    "cfo": "المدير المالي (CFO)",
+    "tax": "الضرائب",
+    "additional_privileges": "امتيازات إضافية"
+  },
+  "featuresPack": {
+    "1": "مسك الدفاتر",
+    "bk_transactions": "المعاملات",
+    "bk_accountant": "المحاسب",
+    "bk_depreciation_calculation": "حساب الاستهلاك",
+    "bk_bank_reconciliation": "تسوية البنك",
+    "bk_cst_supplier": "العملاء والموردين",
+    "bk_reconciliation": "التسوية",
+
+    "2": "المراجعة الداخلية",
+    "ia_stocktaking": "جرد المخزون",
+    "ia_stock_analysis": "تحليل المخزون",
+    "ia_fixing_accounts": "تصحيح الحسابات",
+    "ia_role_distribution": "توزيع الأدوار",
+    "ia_accountant_testing": "اختبار المحاسبين",
+    "ia_risk_management": "إدارة المخاطر",
+    "ia_assets_reevaluation": "إعادة تقييم الأصول",
+    "ia_cost_control": "ضبط التكاليف",
+
+    "3": "البرمجيات",
+    "sw_software_advice": "استشارة برمجية",
+    "sw_choosing_software": "اختيار البرنامج",
+    "sw_users": "المستخدمون",
+    "sw_technical_support": "الدعم الفني",
+    "sw_fixing_charts_of_accounts": "تصحيح دليل الحسابات",
+    "sw_digital_auditing": "التدقيق الرقمي",
+    "sw_privilege_assignment": "توزيع الصلاحيات",
+
+    "cfo_financial_manager": "المدير المالي",
+    "cfo_pnl_reports": "تقارير الأرباح والخسائر",
+    "cfo_balance_sheet": "الميزانية العمومية",
+    "cfo_cash_flow_statements": "تدفقات نقدية",
+    "cfo_accountant_support": "دعم المحاسب",
+    "cfo_internal_control": "الرقابة الداخلية",
+    "cfo_onsite_visits": "زيارات ميدانية",
+    "cfo_decision_making_help": "مساعدة في اتخاذ القرار",
+    "cfo_overseeing_accountants": "الإشراف على المحاسبين",
+    "cfo_on_demand_reports": "تقارير حسب الطلب",
+
+    "4": "الضرائب",
+    "tax_vat_registration": "تسجيل ضريبة القيمة المضافة",
+    "tax_vat_advice": "استشارة ضريبة القيمة المضافة",
+    "tax_vat_return_filing": "تقديم إقرار ضريبة القيمة المضافة",
+    "tax_corporate_tax_registration": "تسجيل ضريبة الشركات",
+    "tax_corporate_tax_advice": "استشارة ضريبة الشركات",
+    "tax_audited_statements": "البيانات المدققة",
+    "tax_aml_compliance": "الامتثال لمكافحة غسل الأموال",
+
+    "5": "امتيازات إضافية",
+    "ap_accountant_hiring": "توظيف محاسبين",
+    "ap_business_review_meeting": "اجتماع مراجعة العمل",
+    "ap_ceo_meeting": "اجتماع مع المدير التنفيذي"
+  },
+  "packageFeatures": {
+    "basic": {
+      "bk_transactions": "50 معاملة",
+      "sw_users": "لا يوجد مستخدمون"
+    },
+    "starter": {
+      "bk_transactions": "200 معاملة",
+      "bk_accountant": "محاسب مشترك",
+      "sw_users": "2 مستخدمين"
+    },
+    "smart": {
+      "bk_transactions": "1000 معاملة",
+      "ia_stocktaking": "جرد مرة واحدة في السنة*",
+      "sw_users": "4 مستخدمين",
+      "cfo_financial_manager": "مدير مالي مشترك",
+      "cfo_onsite_visits": "زيارة ميدانية واحدة",
+      "ap_business_review_meeting": "اجتماع مراجعة أعمال واحد",
+      "ap_ceo_meeting": "اجتماع مع المدير التنفيذي لمدة 30 دقيقة*1"
+    },
+    "professional": {
+      "bk_transactions": "1200 معاملة",
+      "bk_accountant": "محاسب مشترك",
+      "ia_stocktaking": "جرد مرتين في السنة*",
+      "sw_users": "7 مستخدمين",
+      "cfo_financial_manager": "مدير مالي مشترك",
+      "cfo_onsite_visits": "زيارتين ميدانيتين",
+      "ap_accountant_hiring": "توظيف 3 محاسبين",
+      "ap_business_review_meeting": "اجتماعين لمراجعة الأعمال",
+      "ap_ceo_meeting": "اجتماعين مع المدير التنفيذي لمدة 30 دقيقة لكل منهما"
+    },
+    "ultimate": {
+      "bk_transactions": "عدد غير محدود من المعاملات",
+      "bk_accountant": "محاسب مخصص",
+      "ia_stocktaking": "4 مرات سنويًا* أو مرة واحدة سنويًا**",
+      "sw_users": "10 مستخدمين",
+      "cfo_financial_manager": "مدير مالي مخصص",
+      "cfo_onsite_visits": "4 زيارات ميدانية",
+      "ap_accountant_hiring": "توظيف 5 محاسبين",
+      "ap_business_review_meeting": "4 اجتماعات لمراجعة الأعمال",
+      "ap_ceo_meeting": "4 اجتماعات مع المدير التنفيذي لمدة 30 دقيقة لكل منها"
+    }
+  },
   "seemore": "رؤية المزيد",
   "readmore": "إقرأ المزيد",
   "readdetails": "اقرأ التفاصيل",
