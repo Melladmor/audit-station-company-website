@@ -1,4 +1,3 @@
-import { getTranslations } from "next-intl/server";
 import Image from "next/image";
 import React from "react";
 
@@ -7,7 +6,6 @@ type Props = {
 };
 
 const TopPagesSection = async (props: Props) => {
-  const t = await getTranslations();
   return (
     <div className="w-full xl:h-[320px] lg:h-[320px] md:h-[320px] sm:h-[220px] xs:h-[220px] relative">
       <div className="absolute inset-0 z-0">
