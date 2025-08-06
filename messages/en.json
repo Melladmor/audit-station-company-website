@@ -101,6 +101,120 @@
     "overworld": "Over the World",
     "yrs": "yrs"
   },
+
+  "packages": {
+    "basic": {
+      "name": "Basic",
+      "description": "Perfect for startups seeking basic bookkeeping and tax services with limited support.",
+      "features": {
+        "1": {
+          "name": "Bookkeeping for 50 Transactions",
+          "description": "Basic bookkeeping service for up to 50 monthly transactions."
+        },
+        "2": {
+          "name": "Tax Filing Support",
+          "description": "Includes VAT registration, advice, and return filing."
+        },
+        "3": {
+          "name": "Software Advice",
+          "description": "Guidance on selecting suitable accounting software."
+        },
+        "4": {
+          "name": "Financial Reporting",
+          "description": "Get essential financial reports including P&L and Balance Sheet."
+        }
+      }
+    },
+    "starter": {
+      "name": "Starter",
+      "description": "Great for small businesses wanting shared accounting and core CFO services.",
+      "features": {
+        "1": {
+          "name": "Bookkeeping for 200 Transactions",
+          "description": "Shared accountant with support for up to 200 transactions."
+        },
+        "2": {
+          "name": "Software Setup",
+          "description": "Includes user setup, technical support, and chart of accounts fixing."
+        },
+        "3": {
+          "name": "CFO Lite",
+          "description": "Reports like P&L, balance sheet, and cash flow included."
+        },
+        "4": {
+          "name": "Tax Services",
+          "description": "Full VAT and Corporate TAX filing and advisory support."
+        }
+      }
+    },
+    "smart": {
+      "name": "Smart",
+      "description": "Balanced option offering deep insights, compliance, and basic internal auditing.",
+      "features": {
+        "1": {
+          "name": "1000 Transactions & Shared CFO",
+          "description": "Robust transaction processing and strategic reporting."
+        },
+        "2": {
+          "name": "Partial Internal Auditing",
+          "description": "Includes stock analysis and account fixing (excluding risk management)."
+        },
+        "3": {
+          "name": "Software & Technical Support",
+          "description": "Up to 4 users, support, and privilege setup."
+        },
+        "4": {
+          "name": "CEO Meeting & Business Review",
+          "description": "1 meeting with CEO and 1 business review included."
+        }
+      }
+    },
+    "professional": {
+      "name": "Professional",
+      "description": "Ideal for growing businesses needing strong CFO and tax services.",
+      "features": {
+        "1": {
+          "name": "1200 Transactions & CFO",
+          "description": "Shared CFO, onsite visits, and advanced reporting."
+        },
+        "2": {
+          "name": "Expanded Software Integration",
+          "description": "Includes 7 users, support, and custom setup."
+        },
+        "3": {
+          "name": "Auditing and Stocktaking",
+          "description": "2/year stocktaking with auditing and cost control."
+        },
+        "4": {
+          "name": "AML Compliance",
+          "description": "Corporate TAX and AML support included."
+        }
+      }
+    },
+    "ultimate": {
+      "name": "Ultimate",
+      "description": "Comprehensive and premium package with all services and full CFO support.",
+      "features": {
+        "1": {
+          "name": "Unlimited Transactions & Dedicated CFO",
+          "description": "Unlimited processing, strategic help, and full support."
+        },
+        "2": {
+          "name": "Full Auditing & Risk Management",
+          "description": "Includes risk, asset reevaluation, and digital auditing."
+        },
+        "3": {
+          "name": "Advanced Software Setup",
+          "description": "10 users, digital auditing, and chart setup."
+        },
+        "4": {
+          "name": "Executive Meetings & Hiring",
+          "description": "Up to 4 CEO meetings and 5 accountant hires."
+        }
+      }
+    }
+  },
+
   "seemore": "See More",
   "readmore": "Read More",
   "readdetails": "Read Details",

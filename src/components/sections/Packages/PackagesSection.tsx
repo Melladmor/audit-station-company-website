@@ -8,167 +8,312 @@ import Collapse from "@/components/ui/collapse/Collapse";
 const PackagesSection = async () => {
   const t = await getTranslations("sections.packages");
   const btnTitle = await getTranslations();
+  const translate = await getTranslations();
+
+  // const packagesData: PackagesI[] = [
+  //   {
+  //     id: 1,
+  //     name: "Basic",
+  //     price: "999",
+  //     description:
+  //       "Perfect for startups seeking basic bookkeeping and tax services with limited support.",
+  //     features: [
+  //       {
+  //         id: 1,
+  //         name: "Bookkeeping for 50 Transactions",
+  //         description:
+  //           "Basic bookkeeping service for up to 50 monthly transactions.",
+  //       },
+  //       {
+  //         id: 2,
+  //         name: "Tax Filing Support",
+  //         description: "Includes VAT registration, advice, and return filing.",
+  //       },
+  //       {
+  //         id: 3,
+  //         name: "Software Advice",
+  //         description: "Guidance on selecting suitable accounting software.",
+  //       },
+  //       {
+  //         id: 4,
+  //         name: "Financial Reporting",
+  //         description:
+  //           "Get essential financial reports including P&L and Balance Sheet.",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     id: 2,
+  //     name: "Starter",
+  //     price: "2749",
+  //     description:
+  //       "Great for small businesses wanting shared accounting and core CFO services.",
+  //     features: [
+  //       {
+  //         id: 1,
+  //         name: "Bookkeeping for 200 Transactions",
+  //         description:
+  //           "Shared accountant with support for up to 200 transactions.",
+  //       },
+  //       {
+  //         id: 2,
+  //         name: "Software Setup",
+  //         description:
+  //           "Includes user setup, technical support, and chart of accounts fixing.",
+  //       },
+  //       {
+  //         id: 3,
+  //         name: "CFO Lite",
+  //         description:
+  //           "Reports like P&L, balance sheet, and cash flow included.",
+  //       },
+  //       {
+  //         id: 4,
+  //         name: "Tax Services",
+  //         description:
+  //           "Full VAT and Corporate TAX filing and advisory support.",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     id: 3,
+  //     name: "Smart",
+  //     price: "4199",
+  //     description:
+  //       "Balanced option offering deep insights, compliance, and basic internal auditing.",
+  //     features: [
+  //       {
+  //         id: 1,
+  //         name: "1000 Transactions & Shared CFO",
+  //         description: "Robust transaction processing and strategic reporting.",
+  //       },
+  //       {
+  //         id: 2,
+  //         name: "Partial Internal Auditing",
+  //         description:
+  //           "Includes stock analysis and account fixing (excluding risk management).",
+  //       },
+  //       {
+  //         id: 3,
+  //         name: "Software & Technical Support",
+  //         description: "Up to 4 users, support, and privilege setup.",
+  //       },
+  //       {
+  //         id: 4,
+  //         name: "CEO Meeting & Business Review",
+  //         description: "1 meeting with CEO and 1 business review included.",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     id: 4,
+  //     name: "Professional",
+  //     price: "5899",
+  //     description:
+  //       "Ideal for growing businesses needing strong CFO and tax services.",
+  //     features: [
+  //       {
+  //         id: 1,
+  //         name: "1200 Transactions & CFO",
+  //         description: "Shared CFO, onsite visits, and advanced reporting.",
+  //       },
+  //       {
+  //         id: 2,
+  //         name: "Expanded Software Integration",
+  //         description: "Includes 7 users, support, and custom setup.",
+  //       },
+  //       {
+  //         id: 3,
+  //         name: "Auditing and Stocktaking",
+  //         description: "2/year stocktaking with auditing and cost control.",
+  //       },
+  //       {
+  //         id: 4,
+  //         name: "AML Compliance",
+  //         description: "Corporate TAX and AML support included.",
+  //       },
+  //     ],
+  //   },
+  //   {
+  //     id: 5,
+  //     name: "Ultimate",
+  //     price: "14999",
+  //     description:
+  //       "Comprehensive and premium package with all services and full CFO support.",
+  //     features: [
+  //       {
+  //         id: 1,
+  //         name: "Unlimited Transactions & Dedicated CFO",
+  //         description:
+  //           "Unlimited processing, strategic help, and full support.",
+  //       },
+  //       {
+  //         id: 2,
+  //         name: "Full Auditing & Risk Management",
+  //         description:
+  //           "Includes risk, asset reevaluation, and digital auditing.",
+  //       },
+  //       {
+  //         id: 3,
+  //         name: "Advanced Software Setup",
+  //         description: "10 users, digital auditing, and chart setup.",
+  //       },
+  //       {
+  //         id: 4,
+  //         name: "Executive Meetings & Hiring",
+  //         description: "Up to 4 CEO meetings and 5 accountant hires.",
+  //       },
+  //     ],
+  //   },
+  // ];
+
+
   const packagesData: PackagesI[] = [
     {
       id: 1,
-      color: "linear-gradient(180deg, #FFFBAF 0%, #874F9E 100%)",
-      name: "Basic",
-      price: "199",
-      description:
-        "Ideal for startups and small businesses needing essential compliance and financial reporting services.",
+      name: translate("packages.basic.name"),
+      price: "999",
+      description: translate("packages.basic.description"),
       features: [
         {
           id: 1,
-          name: "Monthly Financial Statements",
-          description:
-            "Receive detailed financial statements to track business performance.",
+          name: translate("packages.basic.features.1.name"),
+          description: translate("packages.basic.features.1.description"),
         },
         {
           id: 2,
-          name: "Basic Tax Compliance Support",
-          description:
-            "Assistance with filing and compliance for basic tax requirements.",
+          name: translate("packages.basic.features.2.name"),
+          description: translate("packages.basic.features.2.description"),
         },
         {
           id: 3,
-          name: "Bookkeeping Assistance",
-          description:
-            "Organized bookkeeping to maintain accurate financial records.",
+          name: translate("packages.basic.features.3.name"),
+          description: translate("packages.basic.features.3.description"),
         },
         {
           id: 4,
-          name: "Email Support",
-          description: "Get answers to your queries via email support.",
+          name: translate("packages.basic.features.4.name"),
+          description: translate("packages.basic.features.4.description"),
         },
       ],
     },
     {
       id: 2,
-      color: " linear-gradient(180deg, #D7DDE8 0%, #80CE42 100%)",
-      name: "Standard",
-      price: "399",
-      description:
-        "Comprehensive audit and tax consultancy package for growing businesses.",
+      name: translate("packages.starter.name"),
+      price: "2749",
+      description: translate("packages.starter.description"),
       features: [
         {
           id: 1,
-          name: "Quarterly Financial Audits",
-          description:
-            "Regular audits to ensure financial transparency and compliance.",
+          name: translate("packages.starter.features.1.name"),
+          description: translate("packages.starter.features.1.description"),
         },
         {
           id: 2,
-          name: "Tax Planning & Advisory",
-          description:
-            "Strategic tax planning to optimize financial performance.",
+          name: translate("packages.starter.features.2.name"),
+          description: translate("packages.starter.features.2.description"),
         },
         {
           id: 3,
-          name: "VAT & Sales Tax Compliance",
-          description: "Ensure compliance with VAT and sales tax regulations.",
+          name: translate("packages.starter.features.3.name"),
+          description: translate("packages.starter.features.3.description"),
         },
         {
           id: 4,
-          name: "Dedicated Accountant Support",
-          description:
-            "Access a dedicated accountant for ongoing financial guidance.",
+          name: translate("packages.starter.features.4.name"),
+          description: translate("packages.starter.features.4.description"),
         },
       ],
     },
-
     {
       id: 3,
-      color: "linear-gradient(180deg, #E1F5C4 -5.91%, #FF7600 99.99%",
-      name: "Advanced",
-      price: "599",
-      description:
-        "Designed for mid-sized businesses requiring financial strategy and wealth management solutions.",
+      name: translate("packages.smart.name"),
+      price: "4199",
+      description: translate("packages.smart.description"),
       features: [
         {
           id: 1,
-          name: "Financial Forecasting & Budgeting",
-          description:
-            "Plan future finances with expert forecasting and budgeting.",
+          name: translate("packages.smart.features.1.name"),
+          description: translate("packages.smart.features.1.description"),
         },
         {
           id: 2,
-          name: "Risk Assessment & Mitigation",
-          description: "Identify and mitigate financial risks effectively.",
+          name: translate("packages.smart.features.2.name"),
+          description: translate("packages.smart.features.2.description"),
         },
         {
           id: 3,
-          name: "Wealth Management Consultation",
-          description:
-            "Optimize financial assets with personalized wealth management.",
+          name: translate("packages.smart.features.3.name"),
+          description: translate("packages.smart.features.3.description"),
         },
         {
           id: 4,
-          name: "Custom Financial Reports",
-          description:
-            "Get detailed financial reports tailored to your business needs.",
+          name: translate("packages.smart.features.4.name"),
+          description: translate("packages.smart.features.4.description"),
         },
       ],
     },
     {
       id: 4,
-      color: "linear-gradient(180deg, #A7CCCD 0%, #FDBB2D 100%)",
-      name: "Enterprise",
-      price: "999",
-      description:
-        "Full-scale HR and financial consulting package for enterprises seeking efficiency and compliance.",
+      name: translate("packages.professional.name"),
+      price: "5899",
+      description: translate("packages.professional.description"),
       features: [
         {
           id: 1,
-          name: "HR Policy Development",
-          description:
-            "Create structured HR policies aligned with industry standards.",
+          name: translate("packages.professional.features.1.name"),
+          description: translate(
+            "packages.professional.features.1.description"
+          ),
         },
         {
           id: 2,
-          name: "Payroll & Compensation Management",
-          description: "Ensure accurate and efficient payroll processing.",
+          name: translate("packages.professional.features.2.name"),
+          description: translate(
+            "packages.professional.features.2.description"
+          ),
         },
         {
           id: 3,
-          name: "Employee Benefits Structuring",
-          description: "Develop competitive benefits packages for employees.",
+          name: translate("packages.professional.features.3.name"),
+          description: translate(
+            "packages.professional.features.3.description"
+          ),
         },
         {
           id: 4,
-          name: "Corporate Financial Strategy",
-          description:
-            "Strategic financial planning for business growth and stability.",
+          name: translate("packages.professional.features.4.name"),
+          description: translate(
+            "packages.professional.features.4.description"
+          ),
         },
       ],
     },
     {
       id: 5,
-      color: "linear-gradient(180deg, #DAE2F8 0%, #D6A4A4 100%)",
-      name: "Premium",
-      price: "1,499",
-      description:
-        "Exclusive package offering personalized consulting for business owners and executives.",
+      name: translate("packages.ultimate.name"),
+      price: "14999",
+      description: translate("packages.ultimate.description"),
       features: [
         {
           id: 1,
-          name: "Executive Tax Planning",
-          description: "High-level tax strategies tailored for executives.",
+          name: translate("packages.ultimate.features.1.name"),
+          description: translate("packages.ultimate.features.1.description"),
         },
         {
           id: 2,
-          name: "Mergers & Acquisitions Advisory",
-          description: "Expert guidance on business mergers and acquisitions.",
+          name: translate("packages.ultimate.features.2.name"),
+          description: translate("packages.ultimate.features.2.description"),
         },
         {
           id: 3,
-          name: "CFO-Level Strategic Consulting",
-          description:
-            "Get insights and strategic advice from experienced CFOs.",
+          name: translate("packages.ultimate.features.3.name"),
+          description: translate("packages.ultimate.features.3.description"),
         },
         {
           id: 4,
-          name: "Full Compliance & Risk Management",
-          description: "Ensure full regulatory compliance and risk mitigation.",
+          name: translate("packages.ultimate.features.4.name"),
+          description: translate("packages.ultimate.features.4.description"),
         },
       ],
     },
@@ -182,7 +327,8 @@ const PackagesSection = async () => {
         subTitle: t("subTitle"),
       }}
       className="mt-[100px]"
-      id="packages">
+      id="packages"
+    >
       <PackagesContainer data={packagesData} />
 
       <div className="mt-[32px]">

@@ -9,5 +9,4 @@ export interface PackagesI {
   price: string;
   description: string;
   features: FeatureT[];
-  color?: string;
 }

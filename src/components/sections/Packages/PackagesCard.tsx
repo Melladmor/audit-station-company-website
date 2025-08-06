@@ -6,13 +6,7 @@ import { useTranslations } from "next-intl";
 
 type Props = PackagesI;
 
-const PackagesCard = ({
-  id,
-  description,
-  features,
-  name,
-  price,
-}: Props) => {
+const PackagesCard = ({ id, description, features, name, price }: Props) => {
   const t = useTranslations();
 
   return (
@@ -32,7 +26,7 @@ const PackagesCard = ({
           className="w-full font-[400] bg-[#128c6b]  rounded-[25px] text-white"
           title={t("contactus")}
           isLink
-          path="https://www.google.com"
+          path="https://wa.me/971586028902"
           icon={<IoLogoWhatsapp className="size-[25px] text-white" />}
         />
 
