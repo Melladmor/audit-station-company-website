@@ -271,6 +271,7 @@
     "sw_fixing_charts_of_accounts": "تصحيح دليل الحسابات",
     "sw_digital_auditing": "التدقيق الرقمي",
     "sw_privilege_assignment": "توزيع الصلاحيات",
+    "4": "المدير المالي",
 
     "cfo_financial_manager": "المدير المالي",
     "cfo_pnl_reports": "تقارير الأرباح والخسائر",
@@ -283,7 +284,7 @@
     "cfo_overseeing_accountants": "الإشراف على المحاسبين",
     "cfo_on_demand_reports": "تقارير حسب الطلب",
 
-    "4": "الضرائب",
+    "5": "الضرائب",
     "tax_vat_registration": "تسجيل ضريبة القيمة المضافة",
     "tax_vat_advice": "استشارة ضريبة القيمة المضافة",
     "tax_vat_return_filing": "تقديم إقرار ضريبة القيمة المضافة",
@@ -292,7 +293,7 @@
     "tax_audited_statements": "البيانات المدققة",
     "tax_aml_compliance": "الامتثال لمكافحة غسل الأموال",
 
-    "5": "امتيازات إضافية",
+    "6": "امتيازات إضافية",
     "ap_accountant_hiring": "توظيف محاسبين",
     "ap_business_review_meeting": "اجتماع مراجعة العمل",
     "ap_ceo_meeting": "اجتماع مع المدير التنفيذي"

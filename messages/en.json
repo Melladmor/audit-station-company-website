@@ -272,6 +272,8 @@
     "sw_digital_auditing": "Digital Auditing",
     "sw_privilege_assignment": "Privilege Assignment",
 
+    "4": "CFO",
+
     "cfo_financial_manager": "Financial Manager",
     "cfo_pnl_reports": "P&L Reports",
     "cfo_balance_sheet": "Balance Sheet",
@@ -283,7 +285,7 @@
     "cfo_overseeing_accountants": "Overseeing Accountants",
     "cfo_on_demand_reports": "On Demand Reports",
 
-    "4": "TAX",
+    "5": "TAX",
     "tax_vat_registration": "VAT Registration",
     "tax_vat_advice": "VAT Advice",
     "tax_vat_return_filing": "VAT Return Filing",
@@ -292,7 +294,7 @@
     "tax_audited_statements": "Audited Statements",
     "tax_aml_compliance": "AML Compliance",
 
-    "5": "ADDITIONAL PRIVILEGES",
+    "6": "ADDITIONAL PRIVILEGES",
     "ap_accountant_hiring": "Accountant Hiring",
     "ap_business_review_meeting": "Business Review Meeting",
     "ap_ceo_meeting": "CEO Meeting"

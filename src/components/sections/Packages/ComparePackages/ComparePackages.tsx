@@ -203,7 +203,7 @@ export default function PackagesCompare() {
       name: t("featuresPack.sw_privilege_assignment"),
     },
 
-    { id: "3", categoryId: "cfo", name: t("featuresPack.3") },
+    { id: "3", categoryId: "cfo", name: t("featuresPack.4") },
     {
       id: "cfo_financial_manager",
       categoryId: "cfo",
@@ -255,7 +255,7 @@ export default function PackagesCompare() {
       name: t("featuresPack.cfo_on_demand_reports"),
     },
 
-    { id: "4", categoryId: "tax", name: t("featuresPack.4") },
+    { id: "4", categoryId: "tax", name: t("featuresPack.5") },
     {
       id: "tax_vat_registration",
       categoryId: "tax",
@@ -292,7 +292,7 @@ export default function PackagesCompare() {
       name: t("featuresPack.tax_aml_compliance"),
     },
 
-    { id: "5", categoryId: "additional_privileges", name: t("featuresPack.5") },
+    { id: "5", categoryId: "additional_privileges", name: t("featuresPack.6") },
     {
       id: "ap_accountant_hiring",
       categoryId: "additional_privileges",
