@@ -2,6 +2,7 @@
 import React, { useRef, useEffect } from "react";
 import { TabsFilterT } from "./type";
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 type Props = {
   tabs: TabsFilterT[];
@@ -13,7 +14,7 @@ const FilterTabs = ({ tabs, url_route }: Props) => {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
-
+  const t = useTranslations();
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
@@ -50,7 +51,8 @@ const FilterTabs = ({ tabs, url_route }: Props) => {
           boxShadow: `inset 0 1px 2px 0 rgba(97, 97, 97, 0.2), inset 0 2px 4px 0 rgba(97, 97, 97, 0.2)`,
           scrollbarWidth: "none",
           msOverflowStyle: "none",
-        }}>
+        }}
+      >
         <style jsx>{`
           div::-webkit-scrollbar {
             display: none;
@@ -61,8 +63,9 @@ const FilterTabs = ({ tabs, url_route }: Props) => {
           className={`px-3 py-1 h-full w-fit  flex items-center justify-center text-light-text text-nowrap ${
             isActiveAll ? "bg-black text-white" : ""
           }  rounded-[8px] hover:bg-black hover:text-dark-text cursor-pointer`}
-          onClick={() => handleFilterTabs("all")}>
-          All
+          onClick={() => handleFilterTabs("all")}
+        >
+          {t("all")}
         </div>
 
         {tabs?.map((tab: TabsFilterT) => (
@@ -71,7 +74,8 @@ const FilterTabs = ({ tabs, url_route }: Props) => {
               currentCategory === String(tab?.id) ? "bg-black text-white" : ""
             }  rounded-[8px] hover:bg-black hover:text-dark-text cursor-pointer`}
             onClick={() => handleFilterTabs(tab?.id)}
-            key={tab?.id}>
+            key={tab?.id}
+          >
             {tab?.title}
           </div>
         ))}

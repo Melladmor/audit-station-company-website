@@ -339,6 +339,28 @@
       "ap_ceo_meeting": "4*30Mins CEO Meeting"
     }
   },
+  "meta": {
+    "layout": {
+      "title": "Audit Station",
+      "description": "Audit Station: Your trusted partner in UAE for auditing, accounting, CFO, bookkeeping, and tax services. Expert financial solutions for Dubai and the Middle East.",
+      "keywords": "audit, accounting, bookkeeping, dubai, uae"
+    },
+    "about": {
+      "title": "About | Audit Station",
+      "description": "Audit Station is a trusted accounting and auditing firm serving over 200 clients worldwide, with a strong presence in the UAE and GCC. We deliver tailored financial solutions, advanced auditing practices, and custom-built accounting software to ensure your business's accuracy, compliance, and long-term growth.",
+      "keywords": "audit station, accounting firm uae, auditing services dubai, bookkeeping uae, cfo services gcc, tax advisory, financial software implementation, middle east accounting"
+    },
+    "services": {
+      "title": "Audit Station | Services",
+      "description": "Explore Audit Station’s full range of services: external and internal auditing, bookkeeping, tax advisory (UAE & GCC), CFO services, and custom financial software. Trusted by over 200 clients across the GCC for precision and compliance.",
+      "keywords": "audit services uae, accounting services dubai, internal audit, tax advisory gcc, bookkeeping uae, cfo services middle east, financial software dubai"
+    },
+    "contact": {
+      "title": "Contact | Audit Station",
+      "description": "Get in touch with Audit Station’s offices in Dubai and Muscat. Reach us via phone, email, or the online contact form for expert accounting, auditing, and financial software support.",
+      "keywords": "contact audit station, accounting firm contact dubai, auditing services contact gcc, bookkeeping support, financial software inquiries"
+    }
+  },
   "seemore": "See More",
   "readmore": "Read More",
   "readdetails": "Read Details",
@@ -392,5 +414,6 @@
   "tax_consultations": "TAX Consultation",
   "rewardsTableTitle": "We created a reward program for all of our clients in order to show how much we appreciate them, here is the tiers of the rewards program and the benefits of each teir.",
   "comparepackages": "Compare & Choose the Right Package for Your Business",
-  "comparepackagessub": "Find the perfect plan that fits your needs. Whether you're looking for essential support or a full-suite financial solution, our packages are designed to provide accuracy, efficiency, and strategic growth for your business."
+  "comparepackagessub": "Find the perfect plan that fits your needs. Whether you're looking for essential support or a full-suite financial solution, our packages are designed to provide accuracy, efficiency, and strategic growth for your business.",
+  "all": "All"
 }

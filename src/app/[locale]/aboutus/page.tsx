@@ -9,7 +9,18 @@ import VideoPlayer from "@/components/VideoPlayer/VideoPlayer";
 import Button from "@/components/ui/Buttons/Button";
 import { TbBrandWhatsappFilled } from "react-icons/tb";
 import { AboutUsPageDetailesT } from "@/components/sections/AboutUs/type";
+import { Metadata } from "next";
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("meta.about");
 
+  return {
+    title: t("title"),
+    description: t("description"),
+    keywords: t("keywords")
+      .split(",")
+      .map((k) => k.trim()),
+  };
+}
 const page = async () => {
   const aboutUsData: AboutUsPageDetailesT = await fetchPublicData({
     url: "about_us_details",

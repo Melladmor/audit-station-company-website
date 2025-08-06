@@ -1,13 +1,22 @@
-import {
-  MainServicesI,
-} from "@/components/sections/OurServices/type";
+import { MainServicesI } from "@/components/sections/OurServices/type";
 import CustomSection from "@/components/ui/CustomSection/CustomSection";
 import FilterTabs from "@/components/ui/FilterTabs/FilterTabs";
 import { TabsFilterT } from "@/components/ui/FilterTabs/type";
 import TopPagesSection from "@/components/ui/TopPagesSection";
 import fetchPublicData from "@/lib/api/fetchPublicData";
+import { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("meta.services");
 
+  return {
+    title: t("title"),
+    description: t("description"),
+    keywords: t("keywords")
+      .split(",")
+      .map((k) => k.trim()),
+  };
+}
 export default async function newsLayout({
   children,
 }: {
