@@ -874,11 +874,11 @@ export default function PackagesCompare() {
   };
   return (
     <div className="overflow-x-auto border rounded-xl shadow-sm">
-      <table className="min-w-full text-center text-sm bg-white dark:bg-dark-background text-black dark:text-white">
+      <table className="min-w-full text-center text-sm  text-black dark:text-white">
         <thead>
           <tr>
-            <th className="sticky left-0 z-10  p-4 text-left font-bold border-r border-gray-200">
-              Services
+            <th className="sticky ltr:left-0 rtl:right-0 z-10 bg-gray-100 dark:bg-gray-950  p-4 text-left font-bold border-r border-gray-200">
+              {t("sections.ourservices.second")}
             </th>
             {packagesCompareData?.packages.map((pkg) => (
               <th key={pkg.id} className="p-4 font-bold border-b">
@@ -895,9 +895,9 @@ export default function PackagesCompare() {
                 .map((feature, index) => (
                   <tr key={feature.id} className="border-b">
                     <td
-                      className={`sticky left-0 z-0  ltr:text-left rtl:text-right px-4 py-2 border-r border-gray-200 font-medium ${
+                      className={`sticky ltr:left-0 rtl:right-0 z-0 bg-gray-100 dark:bg-gray-950  ltr:text-left rtl:text-right px-4 py-2 border-r border-gray-200 font-medium ${
                         index === 0
-                          ? "font-semibold bg-gray-100 text-black  border-gray-300"
+                          ? "font-semibold !bg-gray-100  text-black  border-gray-300"
                           : ""
                       }`}
                     >

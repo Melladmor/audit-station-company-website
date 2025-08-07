@@ -12,6 +12,7 @@ export async function generateMetadata(): Promise<Metadata> {
   return {
     title: t("title"),
     description: t("description"),
+
     keywords: t("keywords")
       .split(",")
       .map((k) => k.trim()),

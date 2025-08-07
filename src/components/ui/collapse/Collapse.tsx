@@ -58,12 +58,12 @@ export default function Collapse({ btnClassName, title }: Props) {
               : "opacity-0 scale-95 invisible"
           }`}
         >
-          <div className="flex flex-col items-center gap-[39px] mb-[39px]">
-            <h1 className="text-[24px] font-[700]  text-light-text dark:text-dark-text">
+          <div className="flex flex-col items-center gap-[24px] mb-[39px]">
+            <h1 className="xl:text-[24px] lg:text-[24px] md:text-[20px] sm:text-[16px] xs:text-[16px] font-[700] text-center text-light-text dark:text-dark-text">
               {t("comparepackages")}
             </h1>
 
-            <p className="text-[20px] text-center text-light-text dark:text-dark-text">
+            <p className="xl:text-[20px] lg:text-[20px] md:text-[16px] sm:text-[14px] xs:text-[14px] text-center text-light-text dark:text-dark-text">
               {t("comparepackagessub")}
             </p>
           </div>

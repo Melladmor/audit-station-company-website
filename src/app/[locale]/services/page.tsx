@@ -17,15 +17,12 @@ export default async function ServicesPage({
   const servicesData: ServiceItemT[] = await fetchPublicData({ url });
 
   return (
-    <Suspense fallback={<MainPageLoading />}>
-      <div>
-        <div className="flex flex-row flex-wrap gap-4">
-          {servicesData?.map((el: ServiceItemT) => {
-            return <ServiceCards key={el?.id} data={el} />;
-          })}
-        </div>
-        test
+    <div>
+      <div className="flex flex-row flex-wrap gap-4">
+        {servicesData?.map((el: ServiceItemT) => {
+          return <ServiceCards key={el?.id} data={el} />;
+        })}
       </div>
-    </Suspense>
+    </div>
   );
 }
